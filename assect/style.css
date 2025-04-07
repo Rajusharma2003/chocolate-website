@@ -13,8 +13,6 @@ body {
     background: #0e0d0e;
 }
 
-/* Navbar Styles */
-
 /* Navbar styles */
 .navbar {
 background-color: transparent !important;
@@ -32,8 +30,8 @@ content: "";
 background: url(img/cNavbar\ bottom.png) repeat-x;
 position: absolute;
 height: 8px;
-bottom: -15px;
-left: 47px;
+bottom: -23px;
+left: 101px;
 right: 54px;
 z-index: 1;
 display: block;
@@ -64,8 +62,8 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 .navbar {
     transition: all 0.5s ease;
-    padding: 15px 0;
-    position: fixed;
+    padding: 35px 0;
+    position: absolute;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -78,8 +76,11 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand img {
-    height: 55px;
+    height: 200px;
     transition: all 0.3s ease;
+    position: absolute;
+    top: -48px;
+    z-index: 99;
 }
 
 .navbar.scrolled .navbar-brand img {
@@ -171,7 +172,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 .carousel-caption {
     z-index: 2;
-    bottom: 30%;
+    bottom: 22%;
 }
 
 .carousel-caption h5 {
@@ -268,8 +269,21 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1; /* Make sure it appears above the carousel image */
         }
 
+         /* Grunge overlay styles */
+         .grunge-top {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-image: url('http://crems.like-themes.com/wp-content/uploads/2020/07/grunge-dark-rev-temp-1536x50.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 4;
+        }
+
         /* This about css  */
-        /* Base Styles */
         .patisserie-section {
         padding: 100px 0;
         position: relative;
@@ -384,7 +398,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .feature-text h3 {
-        font-size: 18px;
+        font-size: 31px;
         font-weight: 600;
         margin-bottom: 8px;
         color: #d4a762;
@@ -438,3 +452,129 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         /* End about css */
         
+
+
+
+        /* This is the rotating square banner */
+          
+        .square-box {
+            width: 270px;
+            height: 270px;
+            display: block;
+            border: 1px solid #c19f5f;
+            border-color: #c19f5f;
+            border-color: #c19f5f;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3; /* Higher than heading */
+        }
+        
+        .rotate-animation {
+            animation: rotate 9s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(246.472deg);
+            }
+        }
+        
+        /* For continuous rotation (if you prefer) */
+        .continuous-rotate {
+            animation: continuous-rotate 8s linear infinite;
+        }
+        
+        @keyframes continuous-rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* slider effect banner */
+        .hero-section {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('file:///C:/My%20Web%20Sites/icecream/crems.like-themes.com/wp-content/uploads/2019/06/parallax_02.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* This creates the fixed effect */
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff; /* White text for better contrast */
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            font-family: auto;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 2; /* Lower than square box */
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        
+        .title-container {
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .square-box {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        /* End rotating square banner */
