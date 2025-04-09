@@ -43,3 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
         nextItem.style.transform = 'scale(1)';
     });
 });
+
+
+// Testimonals section
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize slider with auto-rotation
+    var feedbackSlider = new bootstrap.Carousel(document.getElementById('clientFeedbackSlider'), {
+        interval: 5000,
+        wrap: true,
+    });
+    
+    // Add smooth transitions
+    // document.querySelectorAll('.feedback-item').forEach(item => {
+    //     item.style.transition = 'all 0.4s ease';
+    // });
+});

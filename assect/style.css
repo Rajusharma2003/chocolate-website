@@ -96,6 +96,21 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 99;
 }
 
+/* This is for mobile responsive */
+/* Media query for mobile devices (typically 767px or less) */
+@media (max-width: 767px) {
+    .navbar-brand img {
+        height: 174px;
+        transition: all 0.3s ease;
+        position: absolute;
+        top: -56px;
+        left: 4px;
+        z-index: 99;
+    }
+}
+
+
+
 .navbar.scrolled .navbar-brand img {
     height: 35px;
 }
@@ -157,8 +172,21 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 /* Carousel Styles */
 .carousel {
     height: 100vh;
-    overflow: hidden;
 }
+
+
+/* Carousel Styles */
+.widthr{
+    height: 53vh;
+}
+
+/* Media query for mobile devices (typically 767px or less) */
+@media (max-width: 767px) {
+    .widthr{
+        height: 130vh; /* Taller height for mobile screens */
+    }
+}
+
 
 .carousel-inner {
     height: 100%;
@@ -188,8 +216,16 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     bottom: 22%;
 }
 
+/* Media query for mobile devices (typically 767px or less) */
+@media (max-width: 767px) {
+    .carousel-caption {
+        z-index: 2;
+        bottom: 1%;
+    }
+}
+
 .carousel-caption h5 {
-    font-size: 3.5rem;
+    font-size: 3.0rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -515,9 +551,17 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         .hero-section {
             position: relative;
             height: 100vh; /* Full viewport height */
-            overflow: hidden;
+            /* overflow: hidden; */
+        }
+
+        /* Media query for mobile devices (typically 767px or less) */
+        @media (max-width: 767px) {
+            .bloghh{
+                height: 361vh; 
+            }
         }
         
+       
         .hero-bg {
             position: absolute;
             top: 0;
@@ -977,3 +1021,154 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     }
     /* End footer section */
+
+
+    /* This is for the testimonls section */
+    /* Main Feedback Section */
+    /* .feedback-container {
+        padding: 80px 0;
+    } */
+    
+    /* Header Styles */
+    .feedback-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .feedback-header .main-title {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .feedback-header .sub-title {
+        color: #777;
+        font-size: 18px;
+        /* max-width: 700px; */
+        margin: 0 auto;
+    }
+    
+    /* Slider Container */
+    .feedback-slider-wrapper {
+        position: relative;
+        margin: 0 auto;
+        /* max-width: 1800px; */
+    }
+    
+    /* Pattern Background */
+    .slider-pattern-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('img/feedbackbgimg.png');
+        background-repeat: repeat;
+        /* opacity: 0.1; */
+        z-index: 0;
+        border-radius: 15px;
+    }
+    
+    /* Slider Content */
+    .slider-content-area {
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Feedback Card */
+    .feedback-item {
+        background: rgba(255, 255, 255, 0);
+        border-radius: 15px;
+        padding: 40px;
+        /* box-shadow: 0 10px 30px rgba(0,0,0,0.05); */
+        margin: 20px;
+        /* position: relative; */
+        /* transition: all 0.3s ease; */
+    }
+    /* .feedback-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    } */
+    
+    /* Quote Symbol */
+    .feedback-item::before {
+        content: "\201C";
+        font-family: Georgia, serif;
+        font-size: 60px;
+        color: #ffe342;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        line-height: 1;
+    }
+    
+    /* Feedback Text */
+    .feedback-text {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    /* Author Info */
+    .client-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .client-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+        border: 3px solid #ffe342;
+    }
+    .client-details h5 {
+        margin-bottom: 5px;
+        font-weight: 700;
+        color: #333;
+    }
+    .client-details p {
+        color: #777;
+        margin: 0;
+    }
+    
+    /* Navigation Arrows */
+    .slider-nav-prev, 
+    .slider-nav-next {
+        width: 50px;
+        height: 50px;
+        background-color: #ffe342;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .slider-nav-prev:hover,
+    .slider-nav-next:hover {
+        background-color: #ffd700;
+    }
+    .slider-nav-prev {
+        left: -25px;
+    }
+    .slider-nav-next {
+        right: -25px;
+    }
+    
+    /* Indicator Dots */
+    .slider-dots button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd;
+        border: none;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+    }
+    .slider-dots button.active {
+        background-color: #ffe342;
+        transform: scale(1.2);
+    }
+    /* End testimonals section */

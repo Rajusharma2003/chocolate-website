@@ -14,6 +14,48 @@
     <!-- Css -->
      <link rel="stylesheet" href="./assect/style.css">
 
+     <style>
+        /* Rotated border effect */
+        .lte-gallery-sc {
+            display: block;
+            position: relative;
+        }
+        
+        .lte-gallery-sc:after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    display: block;
+    border: 1px solid #c19f5f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 2; /* Ensure it's above the image */
+}
+        
+        /* Hover effect */
+        .lte-gallery-sc:hover:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 95%;
+    height: 95%;
+    opacity: 0.8;
+}
+        
+        /* Image hover effect */
+        .lte-gallery-sc img {
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1; /* Ensure image is below the pseudo-element */
+}
+        
+        .lte-gallery-sc:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+
 </head>
 <body>
 
@@ -82,8 +124,12 @@
             <div class="carousel-item active">
                 <img src="assect/img/cBanner1.jpg" class="d-block w-100 h-100" alt="First slide">
                 <div class="carousel-caption">
-                  <h5> Heavenly Homemade <span style="color: rgb(193 159 95);">Desserts</span> </h5>
+                  <h5> Heavenly Homemade <span style="color: rgb(193 159 95);"> <br>Desserts</span> </h5>
                     <p>Experience the luxury of artisan chocolates, meticulously handcrafted for those with a refined taste. Each piece is a work of art, blending rich flavors and premium ingredients to delight true chocolate lovers.</p>
+                     <!-- Read more button -->
+                <a href="" class="d-flex justify-content-center align-items-center text-decoration-none" >
+                    <span style="border: 2px solid #ffe342; padding: 20px" class="rounded-pill text-white">Shop Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
+                </a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -91,6 +137,10 @@
                 <div class="carousel-caption">
                   <h5> Artisan Chocolate <span style="color: rgb(193 159 95);">Masterpieces</span></h5>
                   <p>Savor the warmth of homemade desserts, baked with love and passion. From timeless classics to creative delights, every bite brings comfort, joy, and irresistible sweetness to your day.</p>
+                   <!-- Read more button -->
+                <a href="" class="d-flex justify-content-center align-items-center text-decoration-none" >
+                    <span style="border: 2px solid #ffe342; padding: 20px" class="rounded-pill text-white">Shop Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
+                </a>
                 </div>
             </div>
             <!-- Grunge texture overlay -->
@@ -116,10 +166,15 @@
             <!-- Left Text Content -->
             <div class="col-lg-6">
               <div class="text-content">
-                <h1>Our patisserie produces<br>unique sweets for lovers<br>of yummy</h1>
-                <p>Curabitur tortor ante, vestibulum vel lacus id, semper malesuada sem. Sed sit amet tortor augue. Integer magna neque</p>
+                <!-- <h1>Our patisserie produces<br>unique sweets for lovers<br>of yummy</h1> -->
+                <h1>Indulge in Uniquely Crafted Perfection</h1>
+                <p>At BonneBelle, we specialise in creating
+                    handcrafted chocolates that not only
+                    delight the senses but also tell a story.
+                    Each bite is a moment of pure bliss.
+                    </p>
                 <div class="buttons">
-                  <a href="#" class="btn btn-download">Download Price</a>
+                  <a href="#" class="btn btn-download">Download Brochure</a>
                   <a href="#" class="btn btn-readmore">Read More →</a>
                 </div>
               </div>
@@ -131,11 +186,13 @@
                 <!-- Feature 1 -->
                 <div class="feature">
                   <div class="icon">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909553.png" alt="Organic">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046786.png" alt="Organic">
                   </div>
                   <div class="feature-text">
-                    <h3>Natural Organic Product</h3>
-                    <p>Vivamus vel magna non mi gravida ultr sed ut turpis.</p>
+                    <h3>Melt-in-Your-Mouth</h3>
+                    <p>Our chocolates are designed to melt
+                        effortlessly, providing a luxurious,
+                        smooth experience with every bite.</p>
                   </div>
                 </div>
                 
@@ -145,8 +202,10 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/3342/3342137.png" alt="Packaging">
                   </div>
                   <div class="feature-text">
-                    <h3>Packaging Design</h3>
-                    <p>Praesent sit amet fringilla eros. Nunc pulv dui tellus.</p>
+                    <h3>Bite-Sized</h3>
+                    <p>Perfectly portioned for an indulgent
+                        experience, our chocolates are crafted
+                        to offer an instant taste of joy.</p>
                   </div>
                 </div>
                 
@@ -156,8 +215,10 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/2909/2909778.png" alt="Cocoa">
                   </div>
                   <div class="feature-text">
-                    <h3>Best Quality Cocoa</h3>
-                    <p>Cras in laoreet metus, vitae efficitur libero. Nam sit amet orci.</p>
+                    <h3>Artisanal</h3>
+                    <p>Handmade with love, each chocolate is
+                        a work of art, showcasing intricate
+                        designs and the finest ingredients. </p>
                   </div>
                 </div>
               </div>
@@ -167,31 +228,32 @@
     </section>
     <!-- End about section -->
 
-     <!-- slider img section -->
-     <section class="hero-section">
+    <!-- slider img section -->
+    <section class="hero-section">
 
-      <!-- Grunge overlay top -->
-      <div class="grunge-top"></div>
+    <!-- Grunge overlay top -->
+    <div class="grunge-top"></div>
 
-      <!-- Fixed Background Image -->
-      <div class="hero-bg"></div>
+    <!-- Fixed Background Image -->
+    <div class="hero-bg"></div>
 
-      <!-- Grunge texture overlay -->
-      <div class="grunge-overlay"></div>
+    <!-- Grunge texture overlay -->
+    <div class="grunge-overlay"></div>
 
-      <!-- Scrollable Content -->
-      <div class="hero-content">
-        <div class="grunge-overlay"></div>
-          <div class="container">
-              <div class="title-container">
-                  <h1 class="hero-title">Made with love <br> <span style="color: rgb(193 159 95); font-style: italic;">unique sweets</span> for gourmet</h1>
-                  <!-- Square box with continuous rotation -->
-                  <div class="square-box continuous-rotate"></div>
-              </div>
-          </div>
-      </div>
-     </section>
-     <!-- End slider img section -->
+    <!-- Scrollable Content -->
+    <div class="hero-content">
+    <div class="grunge-overlay"></div>
+        <div class="container">
+            <div class="title-container">
+                <h1 class="hero-title">Each piece is a <br> <span style="color: rgb(193 159 95); font-style: italic;">fusion of flavour</span> and
+                    artistry</h1>
+                <!-- Square box with continuous rotation -->
+                <div class="square-box continuous-rotate"></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- End slider img section -->
 
      <!-- product section -->
     <div class="container-fluid px-5">
@@ -200,8 +262,8 @@
           <h1 class="background-heading">Bonne Belle</h1>
           
           <!-- Main content -->
-          <p class="sub-heading"><span style="color: rgb(193 159 95);">Online Store</span></p>
-          <h1 class="main-heading"><span style="color: rgb(193 159 95);">Discover</span> Sweet Delicious</h1>
+          <p class="sub-heading"><span style="color: rgb(193 159 95);">Our Store</span></p>
+          <h1 class="main-heading"><span style="color: rgb(193 159 95);">Discover</span> our signature collection</h1>
           <div class="decorative-line"></div>
       </div>
 
@@ -215,7 +277,7 @@
                       <img src="assect/img/product/p1.png" class="product-img" alt="Milk Chocolate With Peanuts">
                   </div>
                   <div class="product-body">
-                      <h5 class="product-title">Milk Chocolate With Peanuts</h5>
+                      <h5 class="product-title">Bonbons</h5>
                       <p class="product-price" style="color: rgb(193 159 95);">$42.49</p>
                       <a href="" class="d-flex justify-content-center align-items-center text-decoration-none" >
                         <span style="border: 2px solid #ffe342; padding: 10px 30px 10px 30px;" class="rounded-pill text-white">Inquiry Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
@@ -232,7 +294,7 @@
                       <img src="assect/img/product/p2.png" class="product-img" alt="Dark Chocolate With Almonds">
                   </div>
                   <div class="product-body">
-                      <h5 class="product-title">Dark Chocolate With Almonds</h5>
+                      <h5 class="product-title">Mendiants</h5>
                       <p class="product-price" style="color: rgb(193 159 95);">$45.99</p>
                       <a href="" class="d-flex justify-content-center align-items-center text-decoration-none" >
                         <span style="border: 2px solid #ffe342; padding: 10px 30px 10px 30px;" class="rounded-pill text-white">Inquiry Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
@@ -249,7 +311,7 @@
                       <img src="assect/img/product/p3.png" class="product-img" alt="White Chocolate With Hazelnuts">
                   </div>
                   <div class="product-body">
-                      <h5 class="product-title">White Chocolate With Hazelnuts</h5>
+                      <h5 class="product-title">Chocolate Barks </h5>
                       <p class="product-price" style="color: rgb(193 159 95);">$39.99</p>
                       <a href="" class="d-flex justify-content-center align-items-center text-decoration-none" >
                         <span style="border: 2px solid #ffe342; padding: 10px 30px 10px 30px;" class="rounded-pill text-white">Inquiry Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
@@ -266,7 +328,7 @@
                       <img src="assect/img/product/p4.png" class="product-img" alt="Caramel Filled Chocolate">
                   </div>
                   <div class="product-body">
-                      <h5 class="product-title">Caramel Filled Chocolate</h5>
+                      <h5 class="product-title">Chocolate Bars</h5>
                       <p class="product-price" style="color: rgb(193 159 95);">$47.99</p>
                       <a href="" class="d-flex justify-content-center align-items-center text-decoration-none" >
                         <span style="border: 2px solid #ffe342; padding: 10px 30px 10px 30px;" class="rounded-pill text-white">Inquiry Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
@@ -281,7 +343,7 @@
           <span style="border: 2px solid #ffe342; padding: 25px 60px 25px 60px;" class="rounded-pill text-white">Shop Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
        </a>
 
-  </div>
+     </div>
      <!-- End product section -->
     
      <!-- slider img section -->
@@ -306,11 +368,180 @@
     </section>
     <!-- End slider img section -->
 
+    <!-- Feedback Section -->
+    <section class="feedback-container pb-md-5" >
+        <div class="container pb-md-5">
+            <div class="product-header">
+                <!-- Background text -->
+                <h1 class="background-heading">Bonne Belle</h1>
+                
+                <!-- Main content -->
+                <p class="sub-heading"><span style="color: rgb(193 159 95);">Testimonials</span></p>
+                <h1 class="main-heading"><span style="color: rgb(193 159 95);">What</span> our Buyers Say</h1>
+                <div class="decorative-line"></div>
+            </div>
+            
+            <div class="feedback-slider-wrapper">
+                <div class="slider-pattern-layer"></div>
+                <div class="slider-content-area">
+                    <div id="clientFeedbackSlider" class="carousel widthr slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Feedback 1 -->
+                            <div class="carousel-item active">
+                                <div class="feedback-item">
+                                    <p class="feedback-text text-white">“This chocolate is more than just a treat—it’s a soulful experience crafted with passion, care, and an exceptional attention to detail that you can taste in every luxurious bite.”</p>
+                                    <div class="client-info">
+                                        <img src="https://www.hotazy.com/images/male.png" alt="Client" class="client-avatar">
+                                        <div class="client-details">
+                                            <h5>Customer</h5>
+                                            <!-- <p>CEO, Tech Solutions Inc.</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Feedback 2 -->
+                            <div class="carousel-item">
+                                <div class="feedback-item">
+                                    <p class="feedback-text text-white">“From the elegant packaging to the exquisite taste, everything about these chocolates speaks of quality, creativity, and the kind of craftsmanship that makes you crave more.”</p>
+                                    <div class="client-info">
+                                        <img src="https://www.hotazy.com/images/female.png" alt="Client" class="client-avatar">
+                                        <div class="client-details">
+                                            <h5>Customer</h5>
+                                            <!-- <p>CEO, Tech Solutions Inc.</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Feedback 3 -->
+                            <div class="carousel-item">
+                                <div class="feedback-item">
+                                    <p class="feedback-text text-white">“Each piece of chocolate delivers a journey of rich, velvety smoothness, layered flavors, and a melt-in-your-mouth texture that truly redefines indulgence and satisfaction.”</p>
+                                    <div class="client-info">
+                                        <img src="https://www.hotazy.com/images/female.png" alt="Client" class="client-avatar">
+                                        <div class="client-details">
+                                            <h5>Customer</h5>
+                                            <!-- <p>CEO, Tech Solutions Inc.</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Controls -->
+                        <button class="carousel-control-prev slider-nav-prev" type="button" data-bs-target="#clientFeedbackSlider" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next slider-nav-next" type="button" data-bs-target="#clientFeedbackSlider" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- blog img section -->
+     <section class=" hero-section bloghh">
+        <!-- Grunge overlay top -->
+        <div class="grunge-top"></div>
+  
+        <!-- Fixed Background Image -->
+        <div class="hero-bg2"></div>
+  
+        <!-- Scrollable Content -->
+        <div class="hero-content">
+            <div class="container">
+                <div class="title-container mt-5">
+                    <p class="text-uppercase pt-5" style="color: #ffe342;">Gallery</p>
+                    <h1 class="hero-title" style="font-size: 3rem;">“Our pastry chefs create sweets only <br> with creativity and love”</h1>
+                </div>
+
+                <div class="container my-5">
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="col-md-6 col-lg-3" >
+                            <div class=" h-100 border-0 ">
+                                <div class="lte-gallery-sc position-relative overflow-hidden">
+                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-01-e1597251883779-360x360.jpg" 
+                                         class="card-img-top w-100" 
+                                         alt="Pastry Creation 1">
+                                         <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+            
+                                </div>
+                                <!-- <div class="card-body text-center">
+                                    <h5 class="card-title">Creative Desserts</h5>
+                                    <p class="card-text text-muted">Handcrafted with passion</p>
+                                </div> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="col-md-6 col-lg-3" style="margin-top: 50px;">
+                            <div class=" h-100 border-0 shadow-sm">
+                                <div class="lte-gallery-sc position-relative overflow-hidden">
+                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-02-360x360.jpg" 
+                                         class="card-img-top w-100" 
+                                         alt="Pastry Creation 2">
+                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                                </div>
+                                <!-- <div class="card-body text-center">
+                                    <h5 class="card-title">Artistic Cakes</h5>
+                                    <p class="card-text text-muted">Edible masterpieces</p>
+                                </div> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="col-md-6 col-lg-3" style="margin-bottom: 50px;">
+                            <div class=" h-100 border-0 shadow-sm">
+                                <div class="lte-gallery-sc position-relative overflow-hidden">
+                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-03-360x360.jpg" 
+                                         class="card-img-top w-100" 
+                                         alt="Pastry Creation 3">
+                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                                </div>
+                                <!-- <div class="card-body text-center">
+                                    <h5 class="card-title">Delicate Pastries</h5>
+                                    <p class="card-text text-muted">Perfectly balanced flavors</p>
+                                </div> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="col-md-6 col-lg-3" style="margin-top: 50px;">
+                            <div class=" h-100 border-0 shadow-sm">
+                                <div class="lte-gallery-sc position-relative overflow-hidden">
+                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-04-360x360.jpg" 
+                                         class="card-img-top w-100" 
+                                         alt="Pastry Creation 4">
+                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                                </div>
+                                <!-- <div class="card-body text-center">
+                                    <h5 class="card-title">Sweet Confections</h5>
+                                    <p class="card-text text-muted">Made with love</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+    <!-- End blog img section -->
 
     <!-- Footer Section -->
     <footer class="footer">
         <!-- Footer Top Image -->
-        <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/footer-bg-2.png" alt="Footer decoration" class="footer-top-img">
+        <img src="assect/img/footertop.png" alt="Footer decoration" class="footer-top-img">
         
         <div class="container footer-content">
             <div class="row">

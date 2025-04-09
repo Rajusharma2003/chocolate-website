@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Feedback Slider</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Rotated border effect */
+        .lte-gallery-sc {
+            display: block;
+            position: relative;
+        }
+        
+        .lte-gallery-sc:after {
+        content: "";
+        width: 80%;
+        height: 80%;
+        display: block;
+        border: 1px solid #c19f5f;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(15deg);
+        pointer-events: none;
+        transition: all 0.4s ease;
+        z-index: 2; /* Ensure it's above the image */
+    }
+        
+        /* Hover effect */
+        .lte-gallery-sc:hover:after {
+        transform: translate(-50%, -50%) rotate(0deg);
+        width: 95%;
+        height: 95%;
+        opacity: 0.8;
+    }
+        
+        /* Image hover effect */
+        .lte-gallery-sc img {
+        transition: transform 0.4s ease;
+        position: relative;
+        z-index: 1; /* Ensure image is below the pseudo-element */
+    }
+        
+        .lte-gallery-sc:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-content">
+        <div class="container">
+            <div class="title-container text-center mb-5">
+                <p class="text-uppercase" style="color: #ffe342;">Gallery</p>
+                <h1 class="hero-title" style="font-size: 3rem;">"Our pastry chefs create sweets only <br> with creativity and love"</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 ">
+                    <div class="lte-gallery-sc position-relative overflow-hidden">
+                        <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-01-e1597251883779-360x360.jpg" 
+                             class="card-img-top w-100" 
+                             alt="Pastry Creation 1">
+                             <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+
+                    </div>
+                    <!-- <div class="card-body text-center">
+                        <h5 class="card-title">Creative Desserts</h5>
+                        <p class="card-text text-muted">Handcrafted with passion</p>
+                    </div> -->
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="lte-gallery-sc position-relative overflow-hidden">
+                        <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-02-360x360.jpg" 
+                             class="card-img-top w-100" 
+                             alt="Pastry Creation 2">
+                        <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Artistic Cakes</h5>
+                        <p class="card-text text-muted">Edible masterpieces</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="lte-gallery-sc position-relative overflow-hidden">
+                        <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-03-360x360.jpg" 
+                             class="card-img-top w-100" 
+                             alt="Pastry Creation 3">
+                        <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Delicate Pastries</h5>
+                        <p class="card-text text-muted">Perfectly balanced flavors</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="lte-gallery-sc position-relative overflow-hidden">
+                        <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-04-360x360.jpg" 
+                             class="card-img-top w-100" 
+                             alt="Pastry Creation 4">
+                        <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sweet Confections</h5>
+                        <p class="card-text text-muted">Made with love</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>
