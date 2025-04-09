@@ -912,7 +912,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
     .contact-info i {
-        color: var(--secondary-color);
+        color: #ffe342;
         margin-right: 10px;
         width: 20px;
         text-align: center;
@@ -930,14 +930,14 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         justify-content: center;
         width: 40px;
         height: 40px;
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgb(0 60 55);
         color: white;
         border-radius: 50%;
         transition: all 0.3s ease;
     }
     
     .social-links a:hover {
-        background-color: var(--secondary-color);
+        background-color: #c19f5f;
         transform: translateY(-3px);
     }
     
