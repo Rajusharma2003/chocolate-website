@@ -10,7 +10,7 @@
 body {
     font-family: 'Poppins', serif;
     overflow-x: hidden;
-    background: #0e0d0e;
+    background: #fff6d2;
 }
 
 /* Navbar styles */
@@ -724,7 +724,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     .product-img-container {
         position: relative;
         padding: 30px;
-        background-color: #0e0d0e;
+        /* background-color: #0e0d0e; */
         height: 300px;
         overflow: hidden;
     }
@@ -1250,7 +1250,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         font-weight: 600;
     }
     
-    /* @media (max-width: 992px) {
+    @media (max-width: 992px) {
         .mission-text {
             position: relative;
             left: 1px;
@@ -1283,7 +1283,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         .sign-bg {
             display: none;
         }
-    } */
+    }
     /* End three banner section */
 
 
@@ -1339,3 +1339,5 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     }
     /* End counter section */
+
+    
