@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .form-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        
+        .form-title {
+            color: #8B4513;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #8B4513;
+            box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.25);
+        }
+        
+        textarea.form-control {
+            height: auto;
+            min-height: 120px;
+            padding-top: 15px;
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        
+        .btn-submit {
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 5px;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .btn-submit:hover {
+            background-color: #6d3810;
+            transform: translateY(-2px);
+        }
+        
+        .input-group-text {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-right: none;
+        }
+        
+        .form-floating label {
+            padding-left: 45px;
+        }
+        
+        .form-floating .form-control {
+            padding-left: 45px;
+        }
+        
+        .form-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8B4513;
+            z-index: 5;
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            .form-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-container">
+                        <h2 class="form-title">Contact Us</h2>
+                        <form>
+                            <!-- Name Field -->
+                            <div class="form-floating mb-4 position-relative">
+                                <i class="fas fa-user form-icon"></i>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                <label for="name">Your Name</label>
+                            </div>
+                            
+                            <!-- Email Field -->
+                            <div class="form-floating mb-4 position-relative">
+                                <i class="fas fa-envelope form-icon"></i>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                <label for="email">Your Email</label>
+                            </div>
+                            
+                            <!-- Phone Field -->
+                            <div class="form-floating mb-4 position-relative">
+                                <i class="fas fa-phone form-icon"></i>
+                                <input type="tel" class="form-control" id="phone" placeholder="Your Phone">
+                                <label for="phone">Your Phone</label>
+                            </div>
+                            
+                            <!-- Subject Field -->
+                            <div class="mb-4">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject">
+                                    <option selected disabled>Select a subject</option>
+                                    <option>General Inquiry</option>
+                                    <option>Product Questions</option>
+                                    <option>Order Support</option>
+                                    <option>Feedback</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Message Field -->
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..."></textarea>
+                            </div>
+                            
+                            <!-- Checkbox -->
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="agree">
+                                <label class="form-check-label" for="agree">I agree to the terms and conditions</label>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-submit">
+                                <i class="fas fa-paper-plane me-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

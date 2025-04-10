@@ -95,7 +95,7 @@
                 </ul>
                 
                 <!-- Social Media Icons -->
-                <ul class="navbar-nav social-icons">
+                <ul class="navbar-nav social-icons d-none d-md-flex">
                     <li class="nav-item">
                         <a class="nav-link" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     </li>
@@ -231,27 +231,24 @@
     <!-- slider img section -->
     <section class="hero-section">
 
-    <!-- Grunge overlay top -->
-    <div class="grunge-top"></div>
+        <!-- Grunge overlay top -->
+        <div class="grunge-top d-none"></div>
 
-    <!-- Fixed Background Image -->
-    <div class="hero-bg"></div>
+        <!-- Fixed Background Image -->
+        <div class="hero-bg"></div>
 
-    <!-- Grunge texture overlay -->
-    <div class="grunge-overlay"></div>
-
-    <!-- Scrollable Content -->
-    <div class="hero-content">
-    <div class="grunge-overlay"></div>
-        <div class="container">
-            <div class="title-container">
-                <h1 class="hero-title">Each piece is a <br> <span style="color: rgb(193 159 95); font-style: italic;">fusion of flavour</span> and
-                    artistry</h1>
-                <!-- Square box with continuous rotation -->
-                <div class="square-box continuous-rotate"></div>
+        <!-- Scrollable Content -->
+        <div class="hero-content">
+        <div class="grunge-overlay d-none d-md-flex"></div>
+            <div class="container">
+                <div class="title-container">
+                    <h1 class="hero-title">Each piece is a <br> <span style="color: rgb(193 159 95); font-style: italic;">fusion of flavour</span> and
+                        artistry</h1>
+                    <!-- Square box with continuous rotation -->
+                    <div class="square-box continuous-rotate"></div>
+                </div>
             </div>
         </div>
-    </div>
     </section>
     <!-- End slider img section -->
 
@@ -346,13 +343,16 @@
      </div>
      <!-- End product section -->
     
-     <!-- slider img section -->
+     <!-- slider video section -->
      <section class=" hero-section">
         <!-- Grunge overlay top -->
         <div class="grunge-top"></div>
   
         <!-- Fixed Background Image -->
         <div class="hero-bg2"></div>
+
+        <!-- Grunge texture overlay -->
+        <div class="grunge-overlay d-none d-md-block"></div>
   
         <!-- Scrollable Content -->
         <div class="hero-content">
@@ -366,7 +366,79 @@
             </div>
         </div>
     </section>
-    <!-- End slider img section -->
+    <!-- End slider video section -->
+
+     <!-- Counter Section -->
+     <section class="counter-section">
+        <div class="container">
+            <div class="row">
+                <!-- Pastry Shops -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter-item">
+                        <div class="counter-number" data-count="230">0</div>
+                        <div class="counter-text">Pastry Shops</div>
+                    </div>
+                </div>
+                
+                <!-- Candies Collections -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter-item">
+                        <div class="counter-number" data-count="26">0</div>
+                        <div class="counter-text">Candies Collections</div>
+                    </div>
+                </div>
+                
+                <!-- Years of Experience -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter-item">
+                        <div class="counter-number" data-count="14">0</div>
+                        <div class="counter-text">Years of Experience</div>
+                    </div>
+                </div>
+                
+                <!-- Creative Pastry Chefs -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="counter-item">
+                        <div class="counter-number" data-count="80">0</div>
+                        <div class="counter-text">Creative Pastry Chefs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Mission Section -->
+     <section class="mission-section">
+        <!-- Background Images -->
+        <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/sign-bg.jpg" alt="Background" class="sign-bg">
+        <img src="http://crems.like-themes.com/wp-content/uploads/2020/07/cocoa-02.png" alt="Cocoa" class="cocoa-bg">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="mission-content text-center">
+                        <!-- Sign Person Image -->
+                        <img src="http://crems.like-themes.com/wp-content/uploads/2020/07/sign-person.png" alt="Pastry Chef" class="sign-person">
+                        
+                        <!-- Mission Text -->
+                        <div class="mission-text text-start">
+                            <h2>The Chocolatier</h2>
+                            <p>"Blending the worlds of fine art and
+                                chocolate, I craft every piece with
+                                love and precision, turning my
+                                passion into a delightful experience,
+                                straight from my heart to yours."</p>
+                            <p class="mb-1"><strong>Saumya Lakhotia</strong></p>
+                            <!-- <p class="chef-title">pastry chef</p> -->
+                            <!-- <img src="http://crems.like-themes.com/wp-content/uploads/2020/07/sign.png" alt="Signature" class="signature"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Mission Section -->
 
     <!-- Feedback Section -->
     <section class="feedback-container pb-md-5" >
@@ -446,7 +518,6 @@
         </div>
     </section>
 
-
      <!-- blog img section -->
      <section class=" hero-section bloghh">
         <!-- Grunge overlay top -->
@@ -466,8 +537,8 @@
                 <div class="container my-5">
                     <div class="row g-4">
                         <!-- Card 1 -->
-                        <div class="col-md-6 col-lg-3" >
-                            <div class=" h-100 border-0 ">
+                        <div class="col-md-6 col-lg-3">
+                            <div class=" h-100 border-0">
                                 <div class="lte-gallery-sc position-relative overflow-hidden">
                                     <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-01-e1597251883779-360x360.jpg" 
                                          class="card-img-top w-100" 
@@ -539,7 +610,7 @@
     <!-- End blog img section -->
 
     <!-- Footer Section -->
-    <footer class="footer">
+    <footer class="footer" style="margin-top: 150px;">
         <!-- Footer Top Image -->
         <img src="assect/img/footertop.png" alt="Footer decoration" class="footer-top-img">
         
@@ -591,6 +662,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

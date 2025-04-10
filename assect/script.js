@@ -58,3 +58,57 @@ document.addEventListener('DOMContentLoaded', function() {
     //     item.style.transition = 'all 0.4s ease';
     // });
 });
+
+
+// This is the number counter section
+    document.addEventListener('DOMContentLoaded', function() {
+        const counterSection = document.querySelector('.counter-section');
+        const counterItems = document.querySelectorAll('.counter-item');
+        const counterNumbers = document.querySelectorAll('.counter-number');
+        const speed = 200; // The lower the faster
+        
+        // Function to animate a single counter
+        function animateCounter(counter, target) {
+            let count = +counter.innerText;
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => animateCounter(counter, target), 1);
+            } else {
+                counter.innerText = target;
+            }
+        }
+        
+        // Function to handle intersection
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Make counter items visible with staggered delay
+                    counterItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                            
+                            // Start counter animation after item becomes visible
+                            setTimeout(() => {
+                                const target = +item.querySelector('.counter-number').getAttribute('data-count');
+                                animateCounter(item.querySelector('.counter-number'), target);
+                            }, 300);
+                            
+                        }, index * 200); // 200ms delay between each item
+                    });
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+        
+        // Create intersection observer
+        const observer = new IntersectionObserver(handleIntersection, { 
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px' // Trigger when 100px from bottom of viewport
+        });
+        
+        // Observe the counter section
+        observer.observe(counterSection);
+    });
