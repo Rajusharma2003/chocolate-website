@@ -1,245 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive FAQ Accordion</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-        
-        *::before,
-        *::after {
-          box-sizing: border-box;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
 
-        body {
-          font-family: "Hind", sans-serif;
-          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Gradient background for demo */
-          color: #4d5974;
-          min-height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          padding: 20px;
-        }
 
-        .container {
-          /* width: 100%;
-          max-width: 800px; */
-          padding: 2rem 1rem;
-          background-color: transparent; /* Made container background transparent */
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-        .container h2 {
-          font-size: 1.75rem;
-          margin-bottom: 1.5rem;
-          text-align: center;
-          color: #03b5d2;
-        }
+* {
+	box-sizing: border-box;
+}
 
-        .accordion .accordion-item {
-          border-bottom: 1px solid rgba(229, 229, 229, 0.5); /* Semi-transparent border */
-          background-color: transparent; /* Transparent background for items */
-        }
-        
-        .accordion button[aria-expanded="true"] {
-          border-bottom: 1px solid rgba(3, 181, 210, 0.7); /* Semi-transparent blue */
-        }
+body {
+	background-color: #f0f0f0;
+	font-family: 'Muli', sans-serif;
+}
 
-        .accordion button {
-          position: relative;
-          display: block;
-          text-align: left;
-          width: 100%;
-          padding: 1em 0;
-          color: #7288a2;
-          font-size: 1.1rem;
-          font-weight: 400;
-          border: none;
-          background: transparent; /* Transparent button background */
-          outline: none;
-          cursor: pointer;
-        }
-        
-        .accordion button:hover,
-        .accordion button:focus {
-          color: #03b5d2;
-          background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
-        }
-        
-        .accordion button:hover .icon::after,
-        .accordion button:hover .icon::before,
-        .accordion button:focus .icon::after,
-        .accordion button:focus .icon::before {
-          background: #03b5d2;
-        }
-        
-        .accordion button .accordion-title {
-          padding: 1em 1.5em 1em 0;
-        }
-        
-        .accordion button .icon {
-          display: inline-block;
-          position: absolute;
-          top: 18px;
-          right: 0;
-          width: 22px;
-          height: 22px;
-          border: 1px solid;
-          border-radius: 22px;
-          background-color: transparent; /* Transparent icon background */
-        }
-        
-        .accordion button .icon::before {
-          display: block;
-          position: absolute;
-          content: "";
-          top: 9px;
-          left: 5px;
-          width: 10px;
-          height: 2px;
-          background: currentColor;
-        }
-        
-        .accordion button .icon::after {
-          display: block;
-          position: absolute;
-          content: "";
-          top: 5px;
-          left: 9px;
-          width: 2px;
-          height: 10px;
-          background: currentColor;
-          transition: all 0.2s ease;
-        }
+h1 {
+	margin: 50px 0 30px;
+	text-align: center;
+}
 
-        .accordion button[aria-expanded="true"] {
-          color: #03b5d2;
-        }
-        
-        .accordion button[aria-expanded="true"] .icon::after {
-          width: 0;
-        }
-        
-        .accordion button[aria-expanded="true"] + .accordion-content {
-          opacity: 1;
-          max-height: 1000px;
-          transition: all 0.2s ease;
-          background-color: transparent; /* Transparent content background */
-        }
+.faqs-container {
+	margin: 0 auto;
+	max-width: 600px;
+}
 
-        .accordion .accordion-content {
-          opacity: 0;
-          max-height: 0;
-          overflow: hidden;
-          transition: all 0.2s ease;
-          background-color: transparent; /* Transparent by default */
-        }
-        
-        .accordion .accordion-content p {
-          font-size: 1rem;
-          font-weight: 300;
-          margin: 1em 0;
-          line-height: 1.5;
-          color: #4d5974; /* Ensure text remains visible */
-        }
+.faq {
+	background-color: transparent;
+	border: 1px solid #9FA4A8;
+	border-radius: 10px;
+	padding: 30px;
+	position: relative;
+	overflow: hidden;
+	margin: 20px 0;
+	transition: 0.3s ease;
+}
 
-        /* Media Queries for Responsiveness */
-        @media (min-width: 768px) {
-          .container {
-            padding: 4rem 2rem;
-          }
-          
-          .container h2 {
-            font-size: 2rem;
-          }
-          
-          .accordion button {
-            font-size: 1.15rem;
-          }
-        }
+.faq.active {
+	background-color: #fff;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
 
-        @media (max-width: 480px) {
-          .container {
-            padding: 1.5rem 0.5rem;
-          }
-          
-          .container h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-          }
-          
-          .accordion button {
-            padding: 0.8em 0;
-          }
-          
-          .accordion button .accordion-title {
-            padding-right: 2em;
-          }
-          
-          .accordion .accordion-content p {
-            margin: 0.8em 0;
-          }
-        }
-    </style>
+.faq.active::after, .faq.active::before {
+	color: #2ecc71;
+	content: '\f075';
+	font-family: 'Font Awesome 5 Free';
+	font-size: 7rem;
+	position: absolute;
+	opacity: 0.2;
+	top: 20px;
+	left: 20px;
+	z-index: 0;
+}
+
+.faq.active::before {
+	color: #3498db;
+	top: -10px;
+	left: -30px;
+	transform: rotateY(180deg);
+}
+
+.faq-title {
+	margin: 0 35px 0 0;
+}
+
+.faq-text {
+	display: none;
+	margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+	display: block;
+}
+
+.faq-toggle {
+	background-color: transparent;
+	border: none;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 30px;
+	width: 30px;
+}
+
+.faq-toggle:focus {
+	outline: none;
+}
+
+.faq.active .faq-toggle {
+	background-color: #9FA4A8;
+}
+
+.faq-toggle .fa-times {
+	display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+	display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+	color: #83888E;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+	display: none;
+}
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #97A5CE;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #001F61;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #97A5CE;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: #001F61;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: #FF6A00;
+	box-shadow: 0 9px 12px -9px #FF6A00;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #001F61;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	z-index: 998;
+}
+
+.floating-text a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
+  </style>
 </head>
 <body>
-    <!-- Faq section -->
-    <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="accordion">
-          <div class="accordion-item">
-            <button id="accordion-button-1" aria-expanded="false">
-              <span class="accordion-title">Why is the moon sometimes out during the day?</span>
-              <span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>The moon is visible during the day because it's in the right part of its orbit to reflect sunlight towards Earth during daylight hours.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title">Why is the sky blue?</span>
-              <span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>The sky appears blue due to a phenomenon called Rayleigh scattering where blue light is scattered more than other colors in the atmosphere.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-3" aria-expanded="false">
-              <span class="accordion-title">Will we ever discover aliens?</span>
-              <span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>Many scientists believe the discovery of extraterrestrial life is inevitable given the vast number of potentially habitable planets in our galaxy.</p>
-            </div>
-          </div>
-        </div>
-    </div>
+  <!-- Design on Dribbble: https://dribbble.com/shots/3967265-FAQ -->
+<h1>Frequently Asked Questions</h1>
 
-    <script>
-        const items = document.querySelectorAll(".accordion button");
+<div class="faqs-container">
+	<div class="faq active">
+		<h3 class="faq-title">
+			Why shouldn't we trust atoms?
+		</h3>
+		<p class="faq-text">
+			They make up everything.
+		</p>
+		<button class="faq-toggle">
+			<i class="fas fa-chevron-down"></i>
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+	
+	<div class="faq">
+		<h3 class="faq-title">
+			What do you call someone with no body and no nose?
+		</h3>
+		<p class="faq-text">
+			Nobody knows.
+		</p>
+		<button class="faq-toggle">
+			<i class="fas fa-chevron-down"></i>
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+	
+	<div class="faq">
+		<h3 class="faq-title">
+			What's the object-oriented way to become wealthy?
+		</h3>
+		<p class="faq-text">
+			Inheritance.
+		</p>
+		<button class="faq-toggle">
+			<i class="fas fa-chevron-down"></i>
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+	
+	<div class="faq">
+		<h3 class="faq-title">
+			How many tickles does it take to tickle an octopus?
+		</h3>
+		<p class="faq-text">
+			Ten-tickles!
+		</p>
+		<button class="faq-toggle">
+			<i class="fas fa-chevron-down"></i>
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+	
+	<div class="faq">
+		<h3 class="faq-title">
+			What is: 1 + 1?
+		</h3>
+		<p class="faq-text">
+			Depends on who are you asking.
+		</p>
+		<button class="faq-toggle">
+			<i class="fas fa-chevron-down"></i>
+			<i class="fas fa-times"></i>
+		</button>
+	</div>
+</div>
 
-        function toggleAccordion() {
-          const itemToggle = this.getAttribute('aria-expanded');
-          
-          for (let i = 0; i < items.length; i++) {
-            items[i].setAttribute('aria-expanded', 'false');
-          }
-          
-          if (itemToggle === 'false') {
-            this.setAttribute('aria-expanded', 'true');
-          }
-        }
 
-        items.forEach(item => item.addEventListener('click', toggleAccordion));
-    </script>
+<script>
+  const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach(toggle => {
+	toggle.addEventListener('click', () => {
+		toggle.parentNode.classList.toggle('active');
+	});
+});
+
+// SOCIAL PANEL JS
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
+
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});
+</script>
 </body>
 </html>

@@ -115,18 +115,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    const items = document.querySelectorAll(".accordion button");
+    // This is faq section
+    const toggles = document.querySelectorAll('.faq-toggle');
 
-    function toggleAccordion() {
-      const itemToggle = this.getAttribute('aria-expanded');
-      
-      for (let i = 0; i < items.length; i++) {
-        items[i].setAttribute('aria-expanded', 'false');
-      }
-      
-      if (itemToggle === 'false') {
-        this.setAttribute('aria-expanded', 'true');
-      }
-    }
-
-    items.forEach(item => item.addEventListener('click', toggleAccordion));
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            toggle.parentNode.classList.toggle('active');
+        });
+    });
+    
+    // SOCIAL PANEL JS
+    const floating_btn = document.querySelector('.floating-btn');
+    const close_btn = document.querySelector('.close-btn');
+    const social_panel_container = document.querySelector('.social-panel-container');
+    
+    floating_btn.addEventListener('click', () => {
+        social_panel_container.classList.toggle('visible')
+    });
+    
+    close_btn.addEventListener('click', () => {
+        social_panel_container.classList.remove('visible')
+    });

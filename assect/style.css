@@ -587,6 +587,19 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             background-attachment: fixed; /* This creates the fixed effect */
             z-index: 1;
         }
+        .hero-bgabout3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/aboutpagechoco.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* This creates the fixed effect */
+            z-index: 1;
+        }
         
         .hero-content {
             position: relative;
@@ -1060,7 +1073,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('img/feedbackbgimg.png');
+        /* background-image: url('img/feedbackbgimg.png'); */
         background-repeat: repeat;
         /* opacity: 0.1; */
         z-index: 0;
@@ -1372,204 +1385,264 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 
     /* Faq section */
-     /* Rotated border effect */
-     .lte-gallery-sc {
-        display: block;
+    /* h1 {
+        margin: 50px 0 30px;
+        text-align: center;
+    } */
+    
+    .faqs-container {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    
+    .faq {
+        background-color: transparent;
+        border: 1px solid #9FA4A8;
+        border-radius: 10px;
+        padding: 30px;
         position: relative;
+        overflow: hidden;
+        margin: 20px 0;
+        transition: 0.3s ease;
     }
     
-    .lte-gallery-sc:after {
-    content: "";
-    width: 80%;
-    height: 80%;
-    display: block;
-    border: 1px solid #c19f5f;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(15deg);
-    pointer-events: none;
-    transition: all 0.4s ease;
-    z-index: 2; /* Ensure it's above the image */
-}
-    
-    /* Hover effect */
-    .lte-gallery-sc:hover:after {
-    transform: translate(-50%, -50%) rotate(0deg);
-    width: 95%;
-    height: 95%;
-    opacity: 0.8;
-}
-    
-    /* Image hover effect */
-    .lte-gallery-sc img {
-    transition: transform 0.4s ease;
-    position: relative;
-    z-index: 1; /* Ensure image is below the pseudo-element */
-}
-    
-    .lte-gallery-sc:hover img {
-        transform: scale(1.05);
-    }
-
-
-    /* This is for the faq section */
-    .container {
-      /* width: 100%;
-      max-width: 800px; */
-      padding: 2rem 1rem;
-      background-color: transparent; /* Made container background transparent */
-    }
-
-    .container h2 {
-      font-size: 1.75rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      /* color: #03b5d2; */
-    }
-
-    .accordion .accordion-item {
-      border-bottom: 1px solid rgba(229, 229, 229, 0.5); /* Semi-transparent border */
-      background-color: transparent; /* Transparent background for items */
+    .faq.active {
+        background-color: #fff;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
     }
     
-    .accordion button[aria-expanded="true"] {
-      border-bottom: 1px solid rgba(3, 181, 210, 0.7); /* Semi-transparent blue */
-    }
-
-    .accordion button {
-      position: relative;
-      display: block;
-      text-align: left;
-      width: 100%;
-      padding: 1em 0;
-      color: #7288a2;
-      font-size: 1.1rem;
-      font-weight: 400;
-      border: none;
-      background: transparent; /* Transparent button background */
-      outline: none;
-      cursor: pointer;
+    .faq.active::after, .faq.active::before {
+        color: #2ecc71;
+        content: '\f075';
+        font-family: 'Font Awesome 5 Free';
+        font-size: 7rem;
+        position: absolute;
+        opacity: 0.2;
+        top: 20px;
+        left: 20px;
+        z-index: 0;
     }
     
-    .accordion button:hover,
-    .accordion button:focus {
-      color: #ad792a;
-      background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+    .faq.active::before {
+        color: #3498db;
+        top: -10px;
+        left: -30px;
+        transform: rotateY(180deg);
     }
     
-    .accordion button:hover .icon::after,
-    .accordion button:hover .icon::before,
-    .accordion button:focus .icon::after,
-    .accordion button:focus .icon::before {
-      background: #003d39;
+    .faq-title {
+        margin: 0 35px 0 0;
     }
     
-    .accordion button .accordion-title {
-      padding: 1em 1.5em 1em 0;
+    .faq-text {
+        display: none;
+        margin: 30px 0 0;
     }
     
-    .accordion button .icon {
-      display: inline-block;
-      position: absolute;
-      top: 18px;
-      right: 0;
-      width: 22px;
-      height: 22px;
-      border: 1px solid;
-      border-radius: 22px;
-      background-color: transparent; /* Transparent icon background */
+    .faq.active .faq-text {
+        display: block;
     }
     
-    .accordion button .icon::before {
-      display: block;
-      position: absolute;
-      content: "";
-      top: 9px;
-      left: 5px;
-      width: 10px;
-      height: 2px;
-      background: currentColor;
+    .faq-toggle {
+        background-color: transparent;
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        padding: 0;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 30px;
+        width: 30px;
     }
     
-    .accordion button .icon::after {
-      display: block;
-      position: absolute;
-      content: "";
-      top: 5px;
-      left: 9px;
-      width: 2px;
-      height: 10px;
-      background: currentColor;
-      transition: all 0.2s ease;
-    }
-
-    .accordion button[aria-expanded="true"] {
-      color: #003d39;
+    .faq-toggle:focus {
+        outline: none;
     }
     
-    .accordion button[aria-expanded="true"] .icon::after {
-      width: 0;
+    .faq.active .faq-toggle {
+        background-color: #9FA4A8;
     }
     
-    .accordion button[aria-expanded="true"] + .accordion-content {
-      opacity: 1;
-      max-height: 1000px;
-      transition: all 0.2s ease;
-      background-color: transparent; /* Transparent content background */
-    }
-
-    .accordion .accordion-content {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.2s ease;
-      background-color: transparent; /* Transparent by default */
+    .faq-toggle .fa-times {
+        display: none;
     }
     
-    .accordion .accordion-content p {
-      font-size: 1rem;
-      font-weight: 300;
-      margin: 1em 0;
-      line-height: 1.5;
-      color: #4d5974; /* Ensure text remains visible */
+    .faq.active .faq-toggle .fa-times {
+        display: block;
     }
-
-    /* Media Queries for Responsiveness */
-    @media (min-width: 768px) {
-      .container {
-        padding: 0rem 0rem;
-      }
-      
-      .container h2 {
-        font-size: 2rem;
-      }
-      
-      .accordion button {
-        font-size: 1.15rem;
-      }
+    
+    .faq-toggle .fa-chevron-down {
+        color: #83888E;
     }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 0.5rem 1.65rem;
-      }
-      
-      .container h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
-      
-      .accordion button {
-        padding: 0.8em 0;
-      }
-      
-      .accordion button .accordion-title {
-        padding-right: 2em;
-      }
-      
-      .accordion .accordion-content p {
-        margin: 0.8em 0;
-      }
+    
+    .faq.active .faq-toggle .fa-chevron-down {
+        display: none;
+    }
+    
+    /* SOCIAL PANEL CSS */
+    .social-panel-container {
+        position: fixed;
+        right: 0;
+        bottom: 80px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .social-panel-container.visible {
+        transform: translateX(-10px);
+    }
+    
+    .social-panel {	
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+        border: 5px solid #001F61;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Muli';
+        position: relative;
+        height: 169px;	
+        width: 370px;
+        max-width: calc(100% - 10px);
+    }
+    
+    .social-panel button.close-btn {
+        border: 0;
+        color: #97A5CE;
+        cursor: pointer;
+        font-size: 20px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    
+    .social-panel button.close-btn:focus {
+        outline: none;
+    }
+    
+    .social-panel p {
+        background-color: #001F61;
+        border-radius: 0 0 10px 10px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 2px 17px 6px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: 0;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 235px;
+    }
+    
+    .social-panel p i {
+        margin: 0 5px;
+    }
+    
+    .social-panel p a {
+        color: #FF7500;
+        text-decoration: none;
+    }
+    
+    .social-panel h4 {
+        margin: 20px 0;
+        color: #97A5CE;	
+        font-family: 'Muli';	
+        font-size: 14px;	
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+    
+    .social-panel ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .social-panel ul li {
+        margin: 0 10px;
+    }
+    
+    .social-panel ul li a {
+        border: 1px solid #DCE1F2;
+        border-radius: 50%;
+        color: #001F61;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        text-decoration: none;
+    }
+    
+    .social-panel ul li a:hover {
+        border-color: #FF6A00;
+        box-shadow: 0 9px 12px -9px #FF6A00;
+    }
+    
+    .floating-btn {
+        border-radius: 26.5px;
+        background-color: #001F61;
+        border: 1px solid #001F61;
+        box-shadow: 0 16px 22px -17px #03153B;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 12px 20px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+    
+    .floating-btn:hover {
+        background-color: #ffffff;
+        color: #001F61;
+    }
+    
+    .floating-btn:focus {
+        outline: none;
+    }
+    
+    .floating-text {
+        background-color: #001F61;
+        border-radius: 10px 10px 0 0;
+        color: #fff;
+        font-family: 'Muli';
+        padding: 7px 15px;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 998;
+    }
+    
+    .floating-text a {
+        color: #FF7500;
+        text-decoration: none;
+    }
+    
+    @media screen and (max-width: 480px) {
+    
+        .social-panel-container.visible {
+            transform: translateX(0px);
+        }
+        
+        .floating-btn {
+            right: 10px;
+        }
     }
     /* End faq section */
