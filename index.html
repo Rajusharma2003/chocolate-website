@@ -13,49 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Css -->
      <link rel="stylesheet" href="./assect/style.css">
-
-     <style>
-        /* Rotated border effect */
-        .lte-gallery-sc {
-            display: block;
-            position: relative;
-        }
-        
-        .lte-gallery-sc:after {
-    content: "";
-    width: 80%;
-    height: 80%;
-    display: block;
-    border: 1px solid #c19f5f;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(15deg);
-    pointer-events: none;
-    transition: all 0.4s ease;
-    z-index: 2; /* Ensure it's above the image */
-}
-        
-        /* Hover effect */
-        .lte-gallery-sc:hover:after {
-    transform: translate(-50%, -50%) rotate(0deg);
-    width: 95%;
-    height: 95%;
-    opacity: 0.8;
-}
-        
-        /* Image hover effect */
-        .lte-gallery-sc img {
-    transition: transform 0.4s ease;
-    position: relative;
-    z-index: 1; /* Ensure image is below the pseudo-element */
-}
-        
-        .lte-gallery-sc:hover img {
-            transform: scale(1.05);
-        }
-    </style>
-
 </head>
 <body>
 
@@ -177,7 +134,7 @@
                     </p>
                 <div class="buttons">
                   <a href="#" class="btn btn-download rounded-pill">Download Brochure →</a>
-                  <a href="#" class="btn btn-readmore rounded-pill">Read More →</a>
+                  <!-- <a href="#" class="btn btn-readmore rounded-pill">Read More →</a> -->
                 </div>
               </div>
             </div>
@@ -252,6 +209,31 @@
         </div>
     </section>
     <!-- End slider img section -->
+
+    <!-- Three banner Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="row g-0">
+                <!-- Left Column - Large Image -->
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="https://restroking.dexignzone.com/xhtml/images/ads/adv1.jpg" alt="Gallery Image 1" class="gallery-img">
+                    </div>
+                </div>
+                
+                <!-- Right Column - Two Small Images -->
+                <div class="col-md-6 right-col">
+                    <div class="img-container">
+                        <img src="https://restroking.dexignzone.com/xhtml/images/ads/adv4.jpg" alt="Gallery Image 2" class="gallery-img">
+                    </div>
+                    <div class="img-container">
+                        <img src="https://restroking.dexignzone.com/xhtml/images/ads/adv4.jpg" alt="Gallery Image 3" class="gallery-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End  -->
 
      <!-- product section -->
     <div class="container-fluid px-5 pb-5">
@@ -408,30 +390,100 @@
         </div>
     </section>
 
-    <!-- Three banner Section -->
-    <section class="gallery-section">
-        <div class="container">
-            <div class="row g-0">
-                <!-- Left Column - Large Image -->
-                <div class="col-md-6">
-                    <div class="img-container">
-                        <img src="https://restroking.dexignzone.com/xhtml/images/ads/adv1.jpg" alt="Gallery Image 1" class="gallery-img">
-                    </div>
+     <!-- Custom chocolates section -->
+     <section class="hero-section bloghh">
+        <!-- Grunge overlay top -->
+        <div class="grunge-top"></div>
+  
+        <!-- Fixed Background Image -->
+        <div class="hero-bg2"></div>
+  
+        <!-- Scrollable Content -->
+        <div class="hero-content">
+            <div class="container">
+                <div class="title-container mt-5">
+                    <p class="text-uppercase " style="color: #ffe342;">Custom chocolates</p>
+                    <h1 class="hero-title" style="font-size: 2rem;">“Let me know if you’d like a more <br>luxurious, fun, or romantic variation!”</h1>
                 </div>
-                
-                <!-- Right Column - Two Small Images -->
-                <div class="col-md-6 right-col">
-                    <div class="img-container">
-                        <img src="https://restroking.dexignzone.com/xhtml/images/ads/adv4.jpg" alt="Gallery Image 2" class="gallery-img">
-                    </div>
-                    <div class="img-container">
-                        <img src="https://restroking.dexignzone.com/xhtml/images/ads/adv4.jpg" alt="Gallery Image 3" class="gallery-img">
+
+                <div class="container-fluid ">
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="col-md-6 col-12 " >
+                            <div class=" h-100 border-0" >
+                                <div class="lte-gallery-sc position-relative overflow-hidden rounded-3" >
+                                    <img src="https://img.freepik.com/free-photo/still-life-cup-brazilian-acai-dessert_23-2150168880.jpg?ga=GA1.1.332943406.1726205077&semt=ais_hybrid&w=740" 
+                                         class="card-img-top w-100" 
+                                         alt="Pastry Creation 1">
+                                         <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                                </div>
+                                <!-- <div class="card-body text-center">
+                                    <h5 class="card-title">Creative Desserts</h5>
+                                    <p class="card-text text-muted">Handcrafted with passion</p>
+                                </div> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="col-md-6 col-12">
+                            <div class=" h-100 border-0 shadow-sm">
+                                <div class="lte-gallery-sc position-relative overflow-hidden rounded-3">
+                                    <img src="https://img.freepik.com/free-photo/still-life-cup-brazilian-acai-dessert_23-2150168880.jpg?ga=GA1.1.332943406.1726205077&semt=ais_hybrid&w=740" 
+                                         class="card-img-top w-100" 
+                                         alt="Pastry Creation 2">
+                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                                </div>
+                                <!-- <div class="card-body text-center">
+                                    <h5 class="card-title">Artistic Cakes</h5>
+                                    <p class="card-text text-muted">Edible masterpieces</p>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- Read more button -->
+                        <a href="" class="pb-5 d-flex justify-content-center align-items-center text-decoration-none" >
+                            <span style="border: 2px solid #ffe342; padding: 25px 60px 25px 60px;" class="rounded-pill text-white">Design Your Chocolate<i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
+                        </a>
+                        
+                        <!-- Card 3 -->
+                        <div class="d-none col-md-6 col-lg-3" style="margin-bottom: 50px;">
+                            <div class=" h-100 border-0 shadow-sm">
+                                <div class="lte-gallery-sc position-relative overflow-hidden">
+                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-03-360x360.jpg" 
+                                         class="card-img-top w-100" 
+                                         alt="Pastry Creation 3">
+                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                                </div>
+                                <!-- <div class="card-body text-center">
+                                    <h5 class="card-title">Delicate Pastries</h5>
+                                    <p class="card-text text-muted">Perfectly balanced flavors</p>
+                                </div> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="d-none col-md-6 col-lg-3" style="margin-top: 50px;">
+                            <div class=" h-100 border-0 shadow-sm">
+                                <div class="lte-gallery-sc position-relative overflow-hidden">
+                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-04-360x360.jpg" 
+                                         class="card-img-top w-100" 
+                                         alt="Pastry Creation 4">
+                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+                                </div>
+                                <!-- <div class="card-body text-center">
+                                    <h5 class="card-title">Sweet Confections</h5>
+                                    <p class="card-text text-muted">Made with love</p>
+                                </div> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        
     </section>
-    <!-- End  -->
+    <!-- End Custom chocolates section -->
 
      <!-- Mission Section -->
      <section class="mission-section">
@@ -543,101 +595,106 @@
             </div>
         </div>
     </section>
+    <!-- End Feedback section -->
 
-     <!-- blog img section -->
-     <section class=" hero-section bloghh">
-        <!-- Grunge overlay top -->
-        <div class="grunge-top"></div>
-  
-        <!-- Fixed Background Image -->
-        <div class="hero-bg2"></div>
-  
-        <!-- Scrollable Content -->
-        <div class="hero-content">
-            <div class="container">
-                <div class="title-container mt-5">
-                    <p class="text-uppercase " style="color: #ffe342;">Custom chocolates</p>
-                    <h1 class="hero-title" style="font-size: 2rem;">“Let me know if you’d like a more <br>luxurious, fun, or romantic variation!”</h1>
-                </div>
-
-                <div class="container-fluid ">
-                    <div class="row g-4">
-                        <!-- Card 1 -->
-                        <div class="col-md-6 col-12 " >
-                            <div class=" h-100 border-0" >
-                                <div class="lte-gallery-sc position-relative overflow-hidden rounded-3" >
-                                    <img src="https://img.freepik.com/free-photo/still-life-cup-brazilian-acai-dessert_23-2150168880.jpg?ga=GA1.1.332943406.1726205077&semt=ais_hybrid&w=740" 
-                                         class="card-img-top w-100" 
-                                         alt="Pastry Creation 1">
-                                         <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
-                                </div>
-                                <!-- <div class="card-body text-center">
-                                    <h5 class="card-title">Creative Desserts</h5>
-                                    <p class="card-text text-muted">Handcrafted with passion</p>
-                                </div> -->
-                            </div>
-                        </div>
-                        
-                        <!-- Card 2 -->
-                        <div class="col-md-6 col-12">
-                            <div class=" h-100 border-0 shadow-sm">
-                                <div class="lte-gallery-sc position-relative overflow-hidden rounded-3">
-                                    <img src="https://img.freepik.com/free-photo/still-life-cup-brazilian-acai-dessert_23-2150168880.jpg?ga=GA1.1.332943406.1726205077&semt=ais_hybrid&w=740" 
-                                         class="card-img-top w-100" 
-                                         alt="Pastry Creation 2">
-                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
-                                </div>
-                                <!-- <div class="card-body text-center">
-                                    <h5 class="card-title">Artistic Cakes</h5>
-                                    <p class="card-text text-muted">Edible masterpieces</p>
-                                </div> -->
-                            </div>
-                        </div>
-
-                        <!-- Read more button -->
-                        <a href="" class="pb-5 d-flex justify-content-center align-items-center text-decoration-none" >
-                            <span style="border: 2px solid #ffe342; padding: 25px 60px 25px 60px;" class="rounded-pill text-white">Design Your Chocolate<i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
-                        </a>
-                        
-                        <!-- Card 3 -->
-                        <div class="d-none col-md-6 col-lg-3" style="margin-bottom: 50px;">
-                            <div class=" h-100 border-0 shadow-sm">
-                                <div class="lte-gallery-sc position-relative overflow-hidden">
-                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-03-360x360.jpg" 
-                                         class="card-img-top w-100" 
-                                         alt="Pastry Creation 3">
-                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
-                                </div>
-                                <!-- <div class="card-body text-center">
-                                    <h5 class="card-title">Delicate Pastries</h5>
-                                    <p class="card-text text-muted">Perfectly balanced flavors</p>
-                                </div> -->
-                            </div>
-                        </div>
-                        
-                        <!-- Card 4 -->
-                        <div class="d-none col-md-6 col-lg-3" style="margin-top: 50px;">
-                            <div class=" h-100 border-0 shadow-sm">
-                                <div class="lte-gallery-sc position-relative overflow-hidden">
-                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-04-360x360.jpg" 
-                                         class="card-img-top w-100" 
-                                         alt="Pastry Creation 4">
-                                    <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
-                                </div>
-                                <!-- <div class="card-body text-center">
-                                    <h5 class="card-title">Sweet Confections</h5>
-                                    <p class="card-text text-muted">Made with love</p>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+     <!-- Faq section -->
+     <div class="container pt-5">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button id="accordion-button-1" aria-expanded="false">
+              <span class="accordion-title">What is BonneBelle?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>BonneBelle is a premium chocolatier brand specialising in handcrafted and artistic chocolates. We create exquisite treats using the finest ingredients to deliver a truly indulgent
+                experience</p>
             </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-2" aria-expanded="false">
+              <span class="accordion-title">What type of chocolate do you use?
+            </span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>At BonneBelle, we use only premium-quality, imported chocolate to ensure an unparalleled taste experience in every bite.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title">Are BonneBelle chocolates customisable?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Yes, we offer customisation for events like weddings, baby showers, corporate gifting, and festivals. You can choose from our range of flavours, packaging, and personalized
+                branding options</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title"> Do you ship pan India?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Currently, we deliver across Delhi NCR. For other areas, please contact us directly to check availability and shipping options</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title">What is the shelf life of BonneBelle chocolates?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Our chocolates are best enjoyed within 2 to 3 weeks from the date of purchase. To extend their shelf life, store them in an airtight container or place the box in a zip lock bag and
+                refrigerate.
+                </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title">How to store the chocolates to maintain freshness?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>To maintain the freshness and flavor of our chocolates, store them in a cool, dry place at a temperature between 18°C and 22°C. Avoid exposing them to heat, humidity, or direct
+                sunlight, as these factors can affect their quality. 
+                </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title">Do you offer bulk or wholesale orders?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Yes, we provide bulk and wholesale options for retailers, events, and corporate gifting. Please contact us for more details and pricing
+                </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title">How can I place an order?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>You can place an order through WhatsApp, email, or our social media channels. Simply send us a message with your requirements, and our team will assist you in completing
+                your order seamlessly. For bulk or custom orders, please get in touch via email or phone.
+                </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title">Do you have a physical store?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Currently, BonneBelle operates online. However, we occasionally participate in pop-up events and markets. Follow us on social media for updates on locations and events </p>
+            </div>
+          </div>
         </div>
-
-        
-    </section>
-    <!-- End blog img section -->
+    </div>
+    <!-- End Faq section -->
 
     <!-- Footer Section -->
     <footer class="footer" style="margin-top: 150px;">
@@ -692,6 +749,7 @@
             </div>
         </div>
     </footer>
+    <!-- End Footer section -->
 
 
     <!-- Bootstrap JS Bundle with Popper -->

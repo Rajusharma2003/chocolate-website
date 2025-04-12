@@ -319,7 +319,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
          /* Grunge overlay styles */
          .grunge-top {
             position: absolute;
-            top: -1px;
+            top: -4px;
             left: 0;
             width: 100%;
             height: 50px;
@@ -1369,3 +1369,207 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     }
     /* End three banner section */
+
+
+    /* Faq section */
+     /* Rotated border effect */
+     .lte-gallery-sc {
+        display: block;
+        position: relative;
+    }
+    
+    .lte-gallery-sc:after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    display: block;
+    border: 1px solid #c19f5f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 2; /* Ensure it's above the image */
+}
+    
+    /* Hover effect */
+    .lte-gallery-sc:hover:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 95%;
+    height: 95%;
+    opacity: 0.8;
+}
+    
+    /* Image hover effect */
+    .lte-gallery-sc img {
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1; /* Ensure image is below the pseudo-element */
+}
+    
+    .lte-gallery-sc:hover img {
+        transform: scale(1.05);
+    }
+
+
+    /* This is for the faq section */
+    .container {
+      /* width: 100%;
+      max-width: 800px; */
+      padding: 2rem 1rem;
+      background-color: transparent; /* Made container background transparent */
+    }
+
+    .container h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      /* color: #03b5d2; */
+    }
+
+    .accordion .accordion-item {
+      border-bottom: 1px solid rgba(229, 229, 229, 0.5); /* Semi-transparent border */
+      background-color: transparent; /* Transparent background for items */
+    }
+    
+    .accordion button[aria-expanded="true"] {
+      border-bottom: 1px solid rgba(3, 181, 210, 0.7); /* Semi-transparent blue */
+    }
+
+    .accordion button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em 0;
+      color: #7288a2;
+      font-size: 1.1rem;
+      font-weight: 400;
+      border: none;
+      background: transparent; /* Transparent button background */
+      outline: none;
+      cursor: pointer;
+    }
+    
+    .accordion button:hover,
+    .accordion button:focus {
+      color: #ad792a;
+      background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+    }
+    
+    .accordion button:hover .icon::after,
+    .accordion button:hover .icon::before,
+    .accordion button:focus .icon::after,
+    .accordion button:focus .icon::before {
+      background: #003d39;
+    }
+    
+    .accordion button .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    
+    .accordion button .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+      background-color: transparent; /* Transparent icon background */
+    }
+    
+    .accordion button .icon::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: 5px;
+      width: 10px;
+      height: 2px;
+      background: currentColor;
+    }
+    
+    .accordion button .icon::after {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 9px;
+      width: 2px;
+      height: 10px;
+      background: currentColor;
+      transition: all 0.2s ease;
+    }
+
+    .accordion button[aria-expanded="true"] {
+      color: #003d39;
+    }
+    
+    .accordion button[aria-expanded="true"] .icon::after {
+      width: 0;
+    }
+    
+    .accordion button[aria-expanded="true"] + .accordion-content {
+      opacity: 1;
+      max-height: 1000px;
+      transition: all 0.2s ease;
+      background-color: transparent; /* Transparent content background */
+    }
+
+    .accordion .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      background-color: transparent; /* Transparent by default */
+    }
+    
+    .accordion .accordion-content p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 1em 0;
+      line-height: 1.5;
+      color: #4d5974; /* Ensure text remains visible */
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (min-width: 768px) {
+      .container {
+        padding: 0rem 0rem;
+      }
+      
+      .container h2 {
+        font-size: 2rem;
+      }
+      
+      .accordion button {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0.5rem 1.65rem;
+      }
+      
+      .container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .accordion button {
+        padding: 0.8em 0;
+      }
+      
+      .accordion button .accordion-title {
+        padding-right: 2em;
+      }
+      
+      .accordion .accordion-content p {
+        margin: 0.8em 0;
+      }
+    }
+    /* End faq section */

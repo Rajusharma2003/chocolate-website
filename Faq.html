@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive FAQ Accordion</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+        
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: "Hind", sans-serif;
+          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Gradient background for demo */
+          color: #4d5974;
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 20px;
+        }
+
+        .container {
+          /* width: 100%;
+          max-width: 800px; */
+          padding: 2rem 1rem;
+          background-color: transparent; /* Made container background transparent */
+        }
+
+        .container h2 {
+          font-size: 1.75rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+          color: #03b5d2;
+        }
+
+        .accordion .accordion-item {
+          border-bottom: 1px solid rgba(229, 229, 229, 0.5); /* Semi-transparent border */
+          background-color: transparent; /* Transparent background for items */
+        }
+        
+        .accordion button[aria-expanded="true"] {
+          border-bottom: 1px solid rgba(3, 181, 210, 0.7); /* Semi-transparent blue */
+        }
+
+        .accordion button {
+          position: relative;
+          display: block;
+          text-align: left;
+          width: 100%;
+          padding: 1em 0;
+          color: #7288a2;
+          font-size: 1.1rem;
+          font-weight: 400;
+          border: none;
+          background: transparent; /* Transparent button background */
+          outline: none;
+          cursor: pointer;
+        }
+        
+        .accordion button:hover,
+        .accordion button:focus {
+          color: #03b5d2;
+          background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+        }
+        
+        .accordion button:hover .icon::after,
+        .accordion button:hover .icon::before,
+        .accordion button:focus .icon::after,
+        .accordion button:focus .icon::before {
+          background: #03b5d2;
+        }
+        
+        .accordion button .accordion-title {
+          padding: 1em 1.5em 1em 0;
+        }
+        
+        .accordion button .icon {
+          display: inline-block;
+          position: absolute;
+          top: 18px;
+          right: 0;
+          width: 22px;
+          height: 22px;
+          border: 1px solid;
+          border-radius: 22px;
+          background-color: transparent; /* Transparent icon background */
+        }
+        
+        .accordion button .icon::before {
+          display: block;
+          position: absolute;
+          content: "";
+          top: 9px;
+          left: 5px;
+          width: 10px;
+          height: 2px;
+          background: currentColor;
+        }
+        
+        .accordion button .icon::after {
+          display: block;
+          position: absolute;
+          content: "";
+          top: 5px;
+          left: 9px;
+          width: 2px;
+          height: 10px;
+          background: currentColor;
+          transition: all 0.2s ease;
+        }
+
+        .accordion button[aria-expanded="true"] {
+          color: #03b5d2;
+        }
+        
+        .accordion button[aria-expanded="true"] .icon::after {
+          width: 0;
+        }
+        
+        .accordion button[aria-expanded="true"] + .accordion-content {
+          opacity: 1;
+          max-height: 1000px;
+          transition: all 0.2s ease;
+          background-color: transparent; /* Transparent content background */
+        }
+
+        .accordion .accordion-content {
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.2s ease;
+          background-color: transparent; /* Transparent by default */
+        }
+        
+        .accordion .accordion-content p {
+          font-size: 1rem;
+          font-weight: 300;
+          margin: 1em 0;
+          line-height: 1.5;
+          color: #4d5974; /* Ensure text remains visible */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 768px) {
+          .container {
+            padding: 4rem 2rem;
+          }
+          
+          .container h2 {
+            font-size: 2rem;
+          }
+          
+          .accordion button {
+            font-size: 1.15rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .container {
+            padding: 1.5rem 0.5rem;
+          }
+          
+          .container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+          }
+          
+          .accordion button {
+            padding: 0.8em 0;
+          }
+          
+          .accordion button .accordion-title {
+            padding-right: 2em;
+          }
+          
+          .accordion .accordion-content p {
+            margin: 0.8em 0;
+          }
+        }
+    </style>
+</head>
+<body>
+    <!-- Faq section -->
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button id="accordion-button-1" aria-expanded="false">
+              <span class="accordion-title">Why is the moon sometimes out during the day?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>The moon is visible during the day because it's in the right part of its orbit to reflect sunlight towards Earth during daylight hours.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-2" aria-expanded="false">
+              <span class="accordion-title">Why is the sky blue?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>The sky appears blue due to a phenomenon called Rayleigh scattering where blue light is scattered more than other colors in the atmosphere.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false">
+              <span class="accordion-title">Will we ever discover aliens?</span>
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Many scientists believe the discovery of extraterrestrial life is inevitable given the vast number of potentially habitable planets in our galaxy.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll(".accordion button");
+
+        function toggleAccordion() {
+          const itemToggle = this.getAttribute('aria-expanded');
+          
+          for (let i = 0; i < items.length; i++) {
+            items[i].setAttribute('aria-expanded', 'false');
+          }
+          
+          if (itemToggle === 'false') {
+            this.setAttribute('aria-expanded', 'true');
+          }
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+</body>
+</html>
