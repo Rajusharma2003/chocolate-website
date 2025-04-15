@@ -1321,7 +1321,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
     .counter-number {
-        font-size: 48px;
+        font-size: 80px;
         font-weight: 700;
         color: #8B4513;
         margin-bottom: 10px;
@@ -1345,7 +1345,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
     @media (max-width: 768px) {
         .counter-number {
-            font-size: 36px;
+            font-size: 70px;
         }
         
         .counter-text {
@@ -1646,3 +1646,37 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     }
     /* End faq section */
+
+
+    /* This is for the form section */
+    .gold-border-btn {
+        border: 2px solid #D4AF37;
+        background-color: transparent;
+        color: #D4AF37;
+        transition: all 0.3s ease;
+        padding: 10px 25px;
+    }
+    
+    .gold-border-btn:hover {
+        background-color: #D4AF37;
+        color: white;
+    }
+    
+    .form-control:focus {
+        border-color: #D4AF37;
+        box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    }
+    
+    .form-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    @media (max-width: 576px) {
+        .gold-border-btn {
+            width: 100%;
+        }
+    }
+    /* End form section */
+
+
+    
