@@ -100,10 +100,10 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 /* Media query for mobile devices (typically 767px or less) */
 @media (max-width: 767px) {
     .navbar-brand img {
-        height: 174px;
+        height: 151px;
         transition: all 0.3s ease;
         position: absolute;
-        top: -56px;
+        top: -50px;
         left: 4px;
         z-index: 99;
     }
@@ -521,6 +521,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         .rotate-animation {
             animation: rotate 9s linear infinite;
         }
+
         
         @keyframes rotate {
             from {
