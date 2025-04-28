@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials Section with Slick</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  
+  <style>
+    /* Same styles you had, slightly adjusted for Slick */
+    .testimonials-section {
+      background-color: #fff6e0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-img-container {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .testimonial-img {
+      transition: transform 0.5s ease;
+    }
+
+    .testimonial-img:hover {
+      transform: scale(1.03);
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: #2c3e50;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, #3498db, #9b59b6);
+    }
+
+    .testimonial-card {
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      background: #fff;
+    }
+
+    .testimonial-rating {
+      color: #f39c12;
+      font-size: 1.2rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    .testimonial-author img {
+      border: 3px solid rgba(52, 152, 219, 0.2);
+    }
+
+    /* Slick dots style */
+    .slick-dots li button:before {
+      font-size: 12px;
+      color: #bdc3c7;
+    }
+    .slick-dots li.slick-active button:before {
+      color: #000000;
+    }
+
+    /* Slick arrows */
+    .slick-prev, .slick-next {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .slick-prev:hover, .slick-next:hover {
+      background-color: #3498db;
+    }
+    .slick-prev:before, .slick-next:before {
+      color: white;
+      font-size: 20px;
+    }
+
+    @media (max-width: 991.98px) {
+      .testimonial-carousel-container {
+        padding-left: 0 !important;
+        margin-top: 30px;
+      }
+      .testimonial-card {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .testimonial-img-container {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .testimonial-img-container {
+        max-width: 100%;
+      }
+      .testimonial-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Testimonials Section -->]
+<section class="testimonials-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="testimonial-img-container">
+          <img src="assect/img/feedbackSection.png" alt="Happy customers" class="img-fluid rounded testimonial-img">
+        </div>
+      </div>
+
+      <!-- Right Carousel -->
+      <div class="col-lg-6">
+        <div class="testimonial-carousel-container ps-lg-4">
+          <h2 class="section-title mb-4">What Our Customers Say</h2>
+          <div class="testimonial-carousel">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"I've been using this service for over a year now and it has completely transformed my workflow. The support team is exceptional and always ready to help."</p>
+              <div class="testimonial-author d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="rounded-circle me-3" width="60">
+                <div>
+                  <h6 class="mb-0">Sarah Johnson</h6>
+                  <p class="text-muted mb-0">Marketing Director</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="testimonial-text">"The product exceeded my expectations. It's intuitive, powerful, and has all the features my team needs to collaborate effectively."</p>
+              <div class="testimonial-author d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="rounded-circle me-3" width="60">
+                <div>
+                  <h6 class="mb-0">Michael Chen</h6>
+                  <p class="text-muted mb-0">CTO, TechStart</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-rating mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"As a small business owner, I was skeptical at first, but this service has helped me save hours every week. The ROI was almost immediate."</p>
+              <div class="testimonial-author d-flex align-items-center mt-4">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Rodriguez" class="rounded-circle me-3" width="60">
+                <div>
+                  <h6 class="mb-0">Emma Rodriguez</h6>
+                  <p class="text-muted mb-0">Founder, Bloom Boutique</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Slick Carousel -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Testimonials Section -->
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.testimonial-carousel').slick({
+      dots: true,
+      arrows: true,
+      infinite: true,
+      speed: 800,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      adaptiveHeight: true,
+      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+    });
+  });
+</script>
+
+</body>
+</html>
