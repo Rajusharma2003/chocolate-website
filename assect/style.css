@@ -8,9 +8,15 @@
 }
 
 body {
-    font-family: 'Poppins', serif;
+    font-family: 'Poppins';
     overflow-x: hidden;
     background: #fff6d2;
+}
+
+/* big calson pro file for h1 */
+h1.big-calson-pro {
+    font-family: 'Big Calson Pro', serif;
+    
 }
 
 /* Navbar styles */
@@ -89,7 +95,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand img {
-    height: 200px;
+    height: 230px;
     transition: all 0.3s ease;
     position: absolute;
     top: -48px;
@@ -307,26 +313,25 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         /* Grunge texture overlay styles */
         .grunge-overlay {
             position: absolute;
-            bottom: -1px;
-            left: 0;
+            bottom: -16px;
+            left: 0px;
             width: 100%;
-            height: 35px; /* Matching the image height */
-            background: url('img/cBannerBottom.png') repeat-x;
+            height: 434px;
+            background: url(img/cBannerBottom.png) repeat-x;
             background-size: contain;
-            z-index: 1; /* Make sure it appears above the carousel image */
+            z-index: 1;
         }
 
          /* Grunge overlay styles */
          .grunge-top {
             position: absolute;
-            top: -4px;
+            top: -26px;
             left: 0;
             width: 100%;
-            height: 50px;
+            height: 100px;
             background-image: url('img/cBannerTop.png');
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: center;
             z-index: 4;
         }
 
@@ -1433,6 +1438,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
     .faq-title {
         margin: 0 35px 0 0;
+        font-size: 1.2rem;
     }
     
     .faq-text {
@@ -1680,4 +1686,49 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* End form section */
 
 
+    /* whatsapp */
+    .whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .1s all ease-in-out;
+        border-radius: 50%;
+        font-size: 2rem;
+        color: white;
+        box-shadow: 0 0 .75rem #18d26e;
+        background-color: #18d26e;
+    }
     
+    .whatsapp:hover {
+        background-color: white;
+        color: #18d26e;
+    }
+    
+    .call {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 60px;
+        transition: .1s all ease-in-out;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 2rem;
+        color: white;
+        background-color: #222222;
+        box-shadow: 0 0 .5rem #eee;
+    }
+    
+    .call:hover {
+        background-color: white;
+        color:#222222;
+    }
+    /* End whatsapp section */
+        
