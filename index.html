@@ -132,6 +132,46 @@
         font-size: 1rem;
       }
     }
+
+     /* Rotated border effect */
+     .lte-gallery-sc {
+            display: block;
+            position: relative;
+        }
+        
+        .lte-gallery-sc:after {
+        content: "";
+        width: 80%;
+        height: 80%;
+        display: block;
+        border: 1px solid #c19f5f;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(15deg);
+        pointer-events: none;
+        transition: all 0.4s ease;
+        z-index: 2; /* Ensure it's above the image */
+    }
+        
+        /* Hover effect */
+        .lte-gallery-sc:hover:after {
+        transform: translate(-50%, -50%) rotate(0deg);
+        width: 95%;
+        height: 95%;
+        opacity: 0.8;
+    }
+        
+        /* Image hover effect */
+        .lte-gallery-sc img {
+        transition: transform 0.4s ease;
+        position: relative;
+        z-index: 1; /* Ensure image is below the pseudo-element */
+    }
+        
+        .lte-gallery-sc:hover img {
+            transform: scale(1.05);
+        }
      </style>
     
 </head>
@@ -209,7 +249,7 @@
                 <img src="assect/img/cBanner1.jpg" class="d-block w-100 h-100" alt="First slide">
                 <div class="carousel-caption">
                   <!-- <h5> Heavenly Homemade <span style="color: #b9a076;"> <br>Desserts</span> </h5> -->
-                  <h5>Bite into bliss with our handcrafted <span style="color: #b9a076;"> <br> bonbons</span> </h5>
+                  <h5>Bite into bliss with <br> our handcrafted <span style="color: #b9a076;"> <br> bonbons</span> </h5>
                     <!-- <p>Indulge in exquisite artisan chocolates, handcrafted with premium ingredients for a luxurious, flavor-rich experience. Perfect for true chocolate connoisseurs.</p> -->
                      <!-- Read more button -->
                 <a href="" class="d-flex justify-content-center align-items-center text-decoration-none" >
@@ -578,86 +618,87 @@
             <div class="container mt-md-5">
                 <div class="title-container mt-5">
                     <p class="text-uppercase " style="color: #ffe342;">Custom  Made to order </p>
-                    <h1 class="hero-title" style="font-size: 1.5rem;">“At Bonnebell, you can create your perfect
+                    <h1 class="hero-title " style="font-size: 1.5rem;">“At BonneBelle, you can create your perfect
                         chocolate experience. From personalised designs
                         and unique flavours to custom colour
                         combinations, we offer endless options to suit
                         every taste and occasion.”</h1>
                 </div>
 
-                <div class="container-fluid ">
+                <div class="container my-5">
                     <div class="row g-4">
                         <!-- Card 1 -->
-                        <div class="col-md-6 col-12">
-                            <div class=" h-100 border-0" >
-                                <div class="lte-gallery-sc position-relative overflow-hidden rounded-3" >
-                                    <img src="assect/img/two2.jpg" 
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 border-0 ">
+                                <div class="lte-gallery-sc position-relative overflow-hidden">
+                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-01-e1597251883779-360x360.jpg" 
                                          class="card-img-top w-100" 
                                          alt="Pastry Creation 1">
                                          <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
+            
                                 </div>
-                                <!-- <div class="card-body text-center">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Creative Desserts</h5>
-                                    <p class="card-text text-muted">Handcrafted with passion</p>
-                                </div> -->
+                                    <!-- <p class="card-text text-muted">Handcrafted with passion</p> -->
+                                </div>
                             </div>
                         </div>
                         
                         <!-- Card 2 -->
-                        <div class="col-md-6 col-12">
-                            <div class=" h-100 border-0 shadow-sm">
-                                <div class="lte-gallery-sc position-relative overflow-hidden rounded-3">
-                                    <img src="assect/img/two1.jpg" 
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="lte-gallery-sc position-relative overflow-hidden">
+                                    <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-02-360x360.jpg" 
                                          class="card-img-top w-100" 
                                          alt="Pastry Creation 2">
                                     <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
                                 </div>
-                                <!-- <div class="card-body text-center">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Artistic Cakes</h5>
-                                    <p class="card-text text-muted">Edible masterpieces</p>
-                                </div> -->
+                                    <!-- <p class="card-text text-muted">Edible masterpieces</p> -->
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Read more button -->
-                        <a href="" class="pb-5 d-flex justify-content-center align-items-center text-decoration-none" >
-                            <span style="border: 2px solid #ffe342; padding: 25px 60px 25px 60px;" class="rounded-pill text-white">How to order<i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
-                        </a>
                         
                         <!-- Card 3 -->
-                        <div class="d-none col-md-6 col-lg-3" style="margin-bottom: 50px;">
-                            <div class=" h-100 border-0 shadow-sm">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 border-0 shadow-sm">
                                 <div class="lte-gallery-sc position-relative overflow-hidden">
                                     <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-03-360x360.jpg" 
                                          class="card-img-top w-100" 
                                          alt="Pastry Creation 3">
                                     <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
                                 </div>
-                                <!-- <div class="card-body text-center">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Delicate Pastries</h5>
-                                    <p class="card-text text-muted">Perfectly balanced flavors</p>
-                                </div> -->
+                                    <!-- <p class="card-text text-muted">Perfectly balanced flavors</p> -->
+                                </div>
                             </div>
                         </div>
                         
                         <!-- Card 4 -->
-                        <div class="d-none col-md-6 col-lg-3" style="margin-top: 50px;">
-                            <div class=" h-100 border-0 shadow-sm">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100 border-0 shadow-sm">
                                 <div class="lte-gallery-sc position-relative overflow-hidden">
                                     <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-04-360x360.jpg" 
                                          class="card-img-top w-100" 
                                          alt="Pastry Creation 4">
                                     <span class="lte-photo position-absolute w-100 h-100 top-0 left-0"></span>
                                 </div>
-                                <!-- <div class="card-body text-center">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">Sweet Confections</h5>
-                                    <p class="card-text text-muted">Made with love</p>
-                                </div> -->
+                                    <!-- <p class="card-text text-muted">Made with love</p> -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Read more button -->
+       <a href="" class="d-flex justify-content-center align-items-center text-decoration-none" >
+        <span style="border: 2px solid #ffe342; padding: 25px 60px 25px 60px;" class="rounded-pill text-white">How to order<i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></span>
+     </a>
+            </div> 
         </div>
         
     </section>
