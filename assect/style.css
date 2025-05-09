@@ -37,7 +37,7 @@ background: url(img/cNavbar\ bottom.png) repeat-x;
 position: absolute;
 height: 8px;
 bottom: -23px;
-left: 101px;
+left: 122px;
 right: 54px;
 z-index: 1;
 display: block;
@@ -219,7 +219,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 .carousel-caption {
     z-index: 2;
-    bottom: 17%;
+    top: 30%;
 }
 
 /* Media query for mobile devices (typically 767px or less) */
@@ -1240,10 +1240,10 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
     .mission-text {
         background-color: rgba(255, 255, 255, 0.438);
-        padding: 40px;
+        padding: 22px;
         border-radius: 10px;
         position: absolute;
-        right: 10%;
+        right: 3%;
         top: 50%;
         transform: translateY(-50%);
         max-width: 400px;
