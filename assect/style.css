@@ -393,6 +393,8 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         line-height: 1.6;
         margin-bottom: 30px;
         opacity: 0.9;
+        max-width: 97%;
+
         }
 
         .buttons {
@@ -1410,12 +1412,12 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
     .faq {
         background-color: transparent;
-        border: 1px solid #9FA4A8;
+        border-bottom: 1px solid #9FA4A8;
         border-radius: 10px;
         padding: 30px;
         position: relative;
         overflow: hidden;
-        margin: 20px 0;
+            margin: -17px 0;
         transition: 0.3s ease;
     }
     
