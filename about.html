@@ -16,6 +16,15 @@
 
     <!-- This is the css section -->
      <style>
+
+          .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: .255em;
+        vertical-align: .255em;
+        content: "";
+        border: none;
+        
+    }
         /* this is banner css */
         .banner-container {
             position: relative;
@@ -87,23 +96,36 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav mx-auto paddleft" style="padding-left: 150px;">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item dropdown">
+
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                             Product
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="product.html">Product 1</a></li>
+                            <li><a class="dropdown-item"  href="product.html">Product 1</a></li>
                             <li><a class="dropdown-item" href="#">Product 2</a></li>
                             <li><a class="dropdown-item" href="#">Product 3</a></li>
                         </ul>
+                    </li>
+
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New Launch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Occasion">Occasion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Customise</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -115,17 +137,17 @@
                 
                 <!-- Social Media Icons -->
                 <ul class="navbar-nav social-icons d-none d-md-flex">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="nav-link" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="nav-link" href="#" target="_blank"><i class="far fa-envelope"></i></a>
                     </li>
                 </ul>
             </div>
@@ -206,7 +228,7 @@
     <!-- End about section -->
 
     <!-- Feature section -->
-     <div class="container">
+     <div class="container py-5">
         <div class="row justify-content-center">
 
             <!-- first section -->
@@ -251,7 +273,7 @@
     <!-- slider img section -->
     <section class="hero-section">
         <!-- Grunge overlay top -->
-        <div class="grunge-top d-none d-md-flex"></div>
+        <!-- <div class="grunge-top d-none d-md-flex"></div> -->
 
         <!-- Fixed Background Image -->
         <div class="hero-bgabout3"></div>
@@ -337,30 +359,25 @@
     <!-- End Counter Section -->
 
     <!-- Footer Section -->
-    <footer class=" footer" style="margin-top: 150px;">
+    <footer class="footer" style="margin-top: 150px; background-color: #003d38;">
         <!-- Footer Top Image -->
-        <img src="assect/img/footertop.png" alt="Footer decoration" class="footer-top-img">
+        <img src="assect/img/choco bottom.png" alt="Footer decoration" class="footer-top-img d-none d-md-block">
         
         <div class="container footer-content">
-            <div class="row">
+            <div class="row justify-content-center ">
                 <!-- Column 1: Logo & About -->
-                <div class="col-lg-5 col-md-6 footer-col">
-                    <img src="assect/img/logo2.png" alt="Bonne Belle Logo" class="footer-logo ">
-                    <p class="footer-about">
-                        Bonne Belle creates exquisite handmade chocolates using only the finest ingredients. 
+                <div class="col-lg-5 col-md-6 footer-col" style="margin-top: -20px;">
+                    <img src="assect/img/logo2.png" alt="BonneBelle Logo" class="footer-logo">
+                    <!-- <p class="footer-about">
+                        BonneBelle creates exquisite handmade chocolates using only the finest ingredients. 
                         Our passion for quality and craftsmanship ensures every bite is a moment of pure delight.
-                    </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
+                    </p> -->
+                   
                 </div>
                 
                 <!-- Column 2: Quick Links -->
                 <div class="col-lg-3 col-md-6 footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
+                    <h4 class="footer-heading">EXPLORE</h4>
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Our Product</a></li>
@@ -371,21 +388,26 @@
                     </ul>
                 </div>
 
-                
                 <!-- Column 3: Contact Info -->
                 <div class="col-lg-4 col-md-12 footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
+                    <h4 class="footer-heading">CONTACT</h4>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Chocolate Avenue, Sweetville, SV 12345</p>
-                        <p><i class="fas fa-envelope"></i> info@bonnebelle.com</p>
-                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM | Sat: 10AM - 4PM</p>
+                        <p> <i class="fab fa-instagram"></i>bonnebelle.chocolaterie</p>
+                        <p> <i class="fas fa-envelope"></i>saumyalakhotia@bonnebellechocolaterie.com</p>
+                        <p> <i class="fas fa-phone"></i> +91 8178014777</p>
+                        <!-- <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM | Sat: 10AM - 4PM</p> -->
+                    </div>
+                     <div class="social-links d-none">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/bonnebelle.chocolaterie?igsh=bWs3aXkycXRtcmpl"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Bonne Belle. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by <a href="https://viraladsmedia.com" style="text-decoration: none; color: #ffe342;">viralAdsMedia</a></p>
+                <p>&copy; 2025 BonneBelle. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by <a href="https://viraladsmedia.com" style="text-decoration: none; color: #837851;">viralAdsMedia</a></p>
             </div>
         </div>
     </footer>
