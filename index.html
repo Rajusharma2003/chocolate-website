@@ -122,6 +122,8 @@
       }
     }
 
+    
+
      /* Rotated border effect */
      .lte-gallery-sc {
             display: block;
@@ -171,6 +173,17 @@
         border: none;
         
     }
+
+    @media (max-width: 767px) {
+            .footer-top-img{
+                position: absolute;
+                top: -114px;
+                left: 0;
+                width: 100%;
+                height: auto;
+                z-index: 1;
+            }
+        }
     </style>
     
 </head>
@@ -1081,7 +1094,7 @@
     <!-- Footer Section -->
     <footer class="footer" style="margin-top: 150px; background-color: #003d38;">
         <!-- Footer Top Image -->
-        <img src="assect/img/choco bottom.png" alt="Footer decoration" class="footer-top-img d-none d-md-block">
+        <img src="assect/img/choco bottom.png" alt="Footer decoration" class="footer-top-img ">
         
         <div class="container footer-content">
             <div class="row justify-content-center ">

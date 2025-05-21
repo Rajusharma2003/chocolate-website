@@ -82,8 +82,21 @@
                 font-size: 1.2rem;
             }
         }
+
+         @media (max-width: 767px) {
+            .footer-top-img{
+                position: absolute;
+                top: -114px;
+                margin-top: 150px;
+                left: 0;
+                width: 100%;
+                height: auto;
+                z-index: 1;
+            }
+        }
         /* End banner css */
     </style>
+    
 </head>
 <body>
 
@@ -178,48 +191,72 @@
         <!-- This is black overlay effect -->
         <div class="overlay"></div>
 
-        <div class="container">
-          <div class="row">
+        <div class="container py-5">
+          <div class="row justify-content-center">
             <!-- Left Text Content -->
-            <div class="col-lg-6">
+            <div class="col-lg-6 justify-content-center align-items-center p-lg-3">
               <div class="text-content">
                 <!-- <h1>Our patisserie produces<br>unique sweets for lovers<br>of yummy</h1> -->
-                <h1 class="text-black">At Bonnebelle Chocolatier, we believe chocolate is more than
-                    just a treat—it’s an experience.</h1>
-                <p class="text-white features">Every chocolate is a piece of art. Lovingly handmade, our
-                    creations blend exquisite flavours with stunning designs. Each
-                    piece is carefully crafted, allowing every flavour to unfold
-                    beautifully. Perfect for gifting, celebrating, or simply enjoying in
-                    your everyday life—Bonwell makes every moment
-                    unforgettable. Pause, smile, and indulge.
-                    
-                    </p>
-                <div class="buttons">
-                  <a href="#" class="btn btn-download rounded-pill">Download Brochure →</a>
-                  <!-- <a href="#" class="btn btn-readmore rounded-pill">Read More →</a> -->
+                <h1 class=""  style="color: #003d38;">A Tasteful Beginning</h1>
+                <p class=" features text-dark"> At <span style="color: #003d38; font-size: 17px; font-weight: 600;">Bonnebelle Chocolatier</span>, we craft exquisite, handmade chocolates that are more than just a treat, they're an experience using only the finest ingredients, each piece blends exceptional flavour with handcrafted design to offer a delightful indulgence. From personalised creations to celebrate special moments or simple elvate your everyday, Bonnebelle makes every bite unforgettable</p>
+               <div class="buttons">
+                    <a style="padding: 13px 17px;" href="#" class="btn btn-download rounded-pill">Download Brochure </a>
                 </div>
               </div>
+
+              <div class="pt-4">
+                        <!-- Feature 1 -->
+                        <div class="feature">
+                          <div class="icon">
+                            <img src="assect/img/abouticon.png" alt="Organic">
+                          </div>
+                          <div class="feature-text">
+                            <h3  style="color: #003d39; ">Premium Ingredients</h3>
+                            <p style="" class="text-black">Exceptional taste and quality in every bite.</p>
+                          </div>
+                        </div>
+                        
+                        <!-- Feature 2 -->
+                        <div class="feature">
+                          <div class="icon">
+                            <img src="assect/img/abouticon2.png" alt="Packaging">
+                          </div>
+                          <div class="feature-text">
+                            <h3  style="color: #003d39;">Custom Made-to-Order</h3>
+                            <p class="text-black" style="">Personalised designs and tailored flavours <br> for any occasion</p>
+                          </div>
+                        </div>
+                        
+                        <!-- Feature 3 -->
+                        <div class="feature">
+                          <div class="icon">
+                            <img src="assect/img/abouticon3.png" alt="Cocoa">
+                          </div>
+                          <div class="feature-text">
+                            <h3  style="color: #003d39;">Handcrafted Perfection</h3>
+                            <p class="text-black" style="">Meticulously crafted, every chocolate <br> is a piece of art.</p>
+                          </div>
+                        </div>
+                </div>
             </div>
             
             <!-- Right Icon Content -->
-            <div class="col-lg-6">
-                <div class="row g-3">
+            <div class="col-lg-6 mr-5" >
+                <div class="d-flex flex-column justify-content-center align-items-center ">
                  
                   <!-- Optional: Add two more images for a 2x2 grid -->
-                  <div class="col-md-6">
-                    <div class="ratio ratio-16x9">
-                      <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-01-e1597251883779.jpg" 
+                  
+                     <div>
+                         <img src="assect/img/aab1.jpg" 
                            alt="BonneBelle packaging"
                            class="img-fluid rounded-3 object-fit-cover shadow-sm">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="ratio ratio-1x1">
-                      <img src="http://crems.like-themes.com/wp-content/uploads/2019/06/gallery-02-1024x1024.jpg" 
+                     </div>
+
+                    <div class="pt-3">
+                      <img src="assect/img/aab2.jpg" 
                            alt="BonneBelle store"
                            class="img-fluid rounded-3 object-fit-cover shadow-sm">
                     </div>
-                  </div>
                 </div>  
               </div>
           </div>
@@ -228,7 +265,7 @@
     <!-- End about section -->
 
     <!-- Feature section -->
-     <div class="container py-5">
+     <div class="container d-none py-5">
         <div class="row justify-content-center">
 
             <!-- first section -->
@@ -280,7 +317,7 @@
 
         <!-- Scrollable Content -->
         <div class="hero-content">
-        <div class="grunge-overlay d-none d-md-flex"></div>
+        <!-- <div class="grunge-overlay d-none d-md-flex"></div> -->
             <div class="container">
                 <div class="title-container">
                     <h1 class="hero-title">Made With love<br> <span style="color: #fff6d2; font-style: italic;">Unique Sweets</span> For Gourmet</h1>
@@ -319,7 +356,7 @@
 
 
     <!-- Counter Section -->
-    <section class="counter-section">
+    <section class="d-none counter-section">
         <div class="container">
             <div class="row">
                 <!-- Pastry Shops -->
@@ -359,9 +396,9 @@
     <!-- End Counter Section -->
 
     <!-- Footer Section -->
-    <footer class="footer" style="margin-top: 150px; background-color: #003d38;">
+    <footer class="footer" style="margin-top: 250px; background-color: #003d38;">
         <!-- Footer Top Image -->
-        <img src="assect/img/choco bottom.png" alt="Footer decoration" class="footer-top-img d-none d-md-block">
+        <img src="assect/img/choco bottom.png" alt="Footer decoration" class="footer-top-img ">
         
         <div class="container footer-content">
             <div class="row justify-content-center ">
