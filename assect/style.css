@@ -574,8 +574,6 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
        
-        
-       
         .hero-bg {
             position: absolute;
             top: 0;
@@ -917,7 +915,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         left: 0;
         width: 100%;
         height: auto;
-        z-index: 1;
+        z-index: -1;
     }
     
     .footer-content {
@@ -1740,3 +1738,90 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     /* End whatsapp section */
         
+
+
+
+
+
+
+
+
+     /* this is banner css */
+        .banner-container {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0f0e0f;
+            opacity: 0.6;
+        }
+        
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            z-index: 2;
+        }
+        
+        .banner-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .banner-content p {
+            font-size: 1.0rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .banner-content h1 {
+                font-size: 2.5rem;
+            }
+            .banner-content p {
+                font-size: 1.2rem;
+            }
+        }
+        /* End banner css */
+
+        .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: .255em;
+        vertical-align: .255em;
+        content: "";
+        border: none;
+        
+    }
+
+    /* Media query for mobile devices (typically 767px or less) */
+        @media (max-width: 767px) {
+           .footer-top-img {
+            position: absolute;
+            top: -114px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+        }

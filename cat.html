@@ -3,65 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Category</title>
+    <title>Bonne Belle Chocolaterie</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .category-section {
-            padding: 50px 0;
-            text-align: center;
+        .info-section {
+            margin-top: 30px;
         }
-        .product-card {
-            /* margin: 15px; */
-            transition: transform 0.3s;
+        .nav-tabs {
+            border-bottom: none;
         }
-        .product-card:hover {
-            transform: translateY(-5px);
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 10px 15px;
+            border: none !important;
+            background: none;
+            cursor: pointer;
         }
-        .product-img {
-            max-width: 80%;
-            height: auto;
-            border-radius: 8px;
+        .nav-link:hover {
+            color: #8B4513; /* Chocolate brown */
         }
-        .product-name {
+        .nav-link.active {
+            color: #5D4037; /* Darker brown */
+            border-bottom: 2px solid #5D4037 !important;
+            background: none;
+        }
+        .content-section {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
             margin-top: 15px;
-            font-weight: 600;
+        }
+        .flavor-options {
+            margin-top: 20px;
+        }
+        .flavor-option {
+            font-weight: bold;
+            color: #5D4037;
         }
     </style>
 </head>
 <body>
-    <section class="category-section">
-        <div class="container">
-            <h2 class="mb-5">Our Category</h2>
-            <div class="row justify-content-center">
-                <!-- Product 1 -->
-                <div class="col-md-3 col-sm-6 product-card">
-                    <img src="assect/img/product/p1.png" alt="Bonbons" class="product-img">
-                    <h4 class="product-name">Bonbons</h4>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="col-md-3 col-sm-6 product-card">
-                    <img src="assect/img/product/p1.png" alt="Bonbons" class="product-img">
-                    <h4 class="product-name">Bonbons</h4>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="col-md-3 col-sm-6 product-card">
-                    <img src="assect/img/product/p1.png" alt="Bonbons" class="product-img">
-                    <h4 class="product-name">Bonbons</h4>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="col-md-3 col-sm-6 product-card">
-                    <img src="assect/img/product/p1.png" alt="Bonbons" class="product-img">
-                    <h4 class="product-name">Bonbons</h4>
+    <div class="container-fluid py-5">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <h1 class="text-center mb-4">Bonne Belle Chocolaterie</h1>
+            
+                <!-- Tab Navigation -->
+                <div class="info-section">
+                    <ul class="nav nav-tabs" id="infoTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="how-to-order-tab" data-bs-toggle="tab" data-bs-target="#how-to-order" type="button" role="tab" aria-controls="how-to-order" aria-selected="true">How to Order</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="additional-info-tab" data-bs-toggle="tab" data-bs-target="#additional-info" type="button" role="tab" aria-controls="additional-info" aria-selected="false">Additional Information</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="Description-info-tab" data-bs-toggle="tab" data-bs-target="#Description" type="button" role="tab" aria-controls="additional-info" aria-selected="false">Description</button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="infoTabsContent">
+
+                        <!-- How to order section -->
+                        <div class="tab-pane fade show active content-section" id="how-to-order" role="tabpanel" aria-labelledby="how-to-order-tab">
+                            <h4>STEP 1:</h4>
+                            <p>Browse through our collections right here on the website</p>
+                            
+                            <h4>STEP 2:</h4>
+                            <p>Found what you love? Just click the WhatsApp icon to place your order directly with us.</p>
+                            
+                            <h4>STEP 3:</h4>
+                            <p>Prefer email? Drop us a line at <a href="mailto:saumyalakhotia@bonnebellechocolaterie.com">saumyalakhotia@bonnebellechocolaterie.com</a>, and we'll take it from there.</p>
+                        </div>
+                        
+                        <!-- Information section -->
+                        <div class="tab-pane fade content-section" id="additional-info" role="tabpanel" aria-labelledby="additional-info-tab">
+                            <p><strong>Consume within 2 weeks.</strong></p>
+                            
+                            <p><strong>Allergen Info:</strong> Contains soy, milk solids, nuts and gluten.</p>
+                            
+                            <p><strong>Storage Info:</strong> Store in cool, dark place away from sunlight (18-24 degree celcius)</p>
+                        </div>
+
+                        <!-- Description section -->
+                        <div class="tab-pane fade content-section" id="Description" role="tabpanel" aria-labelledby="Description-info-tab">
+                            <p><strong> this si the sdfsadConsume within 2 weeks.</strong></p>
+                            
+                            <p><strong>Allergen Info:</strong> Contains soy, milk solids, nuts and gluten.</p>
+                            
+                            <p><strong>Storage Info:</strong> Store in cool, dark place away from sunlight (18-24 degree celcius)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
