@@ -23,6 +23,7 @@
 .cimg{
     width: 100%;
     display: block;
+    border-radius: 10px;
 }
 .img-display{
     overflow: hidden;
@@ -35,6 +36,9 @@
 }
 .img-showcase img{
     min-width: 100%;
+    border-radius: 32px;
+    margin-bottom: 16px;
+    padding: 5px;
 }
 .img-select{
     display: flex;
@@ -51,7 +55,7 @@
     opacity: 0.8;
 }
 .product-content{
-    padding: 2rem 1rem;
+    /* padding: 2rem 1rem; */
 }
 .product-titled{
     font-size: 3rem;
@@ -194,7 +198,7 @@
         justify-content: center;
     }
     .product-content{
-        padding-top: 50px;
+        /* padding-top: 50px; */
     }
 }
 
@@ -205,21 +209,23 @@
         .nav-tabs {
             border-bottom: none;
         }
-        .nav-link {
+        .nav-link2 {
             color: #333;
             font-weight: 500;
-            padding: 10px 15px;
+            /* padding: 10px 15px; */
+            margin: 10px;
             border: none !important;
             background: none;
             cursor: pointer;
         }
-        .nav-link:hover {
-            color: #8B4513; /* Chocolate brown */
-        }
-        .nav-link.active {
-            color: #5D4037; /* Darker brown */
-            /* border-bottom: 2px solid #5D4037 ; */
+        /* .nav-link:hover { */
+            /* color: #8b45139c; Chocolate brown */
+        /* } */
+        .nav-link2.active {
+            color: #aa915c; /* Darker brown */
+            border-bottom: 2px solid #aa915c !important;
             background: none;
+             display: inline-block; /* shrink to content width */
         }
         .content-section {
             padding: 20px;
@@ -312,7 +318,7 @@
     <!-- banner section -->
     <div class="banner-container">
         <!-- Your banner image -->
-        <img src="../../assect/img/product/artBonbons/7detailsimg/MoodboardsBanner.jpg" alt="Banner" class="banner-img">
+        <img src="../../assect/img/productBanner.jpg" alt="Banner" class="banner-img">
 
         <!-- Grunge texture overlay -->
         <div class="grunge-overlay d-none d-md-flex"></div>
@@ -322,16 +328,15 @@
         
         <!-- Centered content -->
         <div class="banner-content">
-            <!-- <h1>Our Product</h1>
-            <p>Home // Our Product</p> -->
+            <h1>Our Product</h1>
+            <p>Home // Our Product</p>
             <!-- <button class="btn btn-primary btn-lg">Call to Action</button> -->
         </div>
     </div>
     <!-- End banner section -->
 
-
     <!-- partial:index.partial.html -->
-    <div class = "card-wrapper">
+    <div class="card-wrapper">
       <div class = "cardd bg-transparent border-0">
         <!-- card left -->
         <div class = "product-imgs">
@@ -341,6 +346,7 @@
               <img class="cimg" src = "../../assect/img/product/artBonbons/7detailsimg/3.jpg" alt = "shoe image">
               <img class="cimg" src = "../../assect/img/product/artBonbons/7detailsimg/2.png" alt = "shoe image">
               <img class="cimg" src = "../../assect/img/product/artBonbons/7detailsimg/4.jpg" alt = "shoe image">
+              <img class="cimg" src = "../../assect/img/product/artBonbons/7detailsimg/5.jpg" alt = "shoe image">
             </div>
           </div>
           <div class = "img-select">
@@ -356,12 +362,17 @@
             </div>
             <div class = "img-item">
               <a href = "#" data-id = "3">
-                <img class="cimg" src = "../../assect/img/product/artBonbons/7detailsimg/2.png" alt = "shoe image">
+                <img style="border-radius: 30px;" class="cimg" src = "../../assect/img/product/artBonbons/7detailsimg/2.png" alt = "shoe image">
               </a>
             </div>
             <div class = "img-item">
               <a href = "#" data-id = "4">
                 <img class="cimg" src = "../../assect/img/product/artBonbons/7detailsimg/4.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "5">
+                <img class="cimg" src = "../../assect/img/product/artBonbons/7detailsimg/5.jpg" alt = "shoe image">
               </a>
             </div>
           </div>
@@ -413,22 +424,28 @@
     </div>
     <!-- partial -->
 
+    <!-- img banner section -->
+     <div class="container-fluid px-0">
+        <img src="../../assect/img/product/artBonbons/7detailsimg/Blueberry Moodboard.png" alt="Banner" class="banner-img">
+    </div>
+    <!-- End img banner section -->
+
     <!-- Tab Navigation -->
-      <div class="container-fluid py-5">
-        <div class="row">
+      <div class="container">
+        <div class="row ">
             <div class="col-lg-12 mx-auto">
 
                 <!-- Tab Navigation -->
                 <div class="info-section">
-                    <ul class="nav nav-tabs border-black" id="infoTabs" role="tablist">
+                    <ul class="nav nav-tabs border-black d-flex flex-row justify-content-center" id="infoTabs" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active bg-transparent" id="how-to-order-tab" data-bs-toggle="tab" data-bs-target="#how-to-order" type="button" role="tab" aria-controls="how-to-order" aria-selected="true"><span class=" fs-4" style="color: #003d38; font-weight: 600;">Description</span></button>
+                            <button class="nav-link2 active bg-transparent" id="how-to-order-tab" data-bs-toggle="tab" data-bs-target="#how-to-order" type="button" role="tab" aria-controls="how-to-order" aria-selected="true"><span class=" fs-4" style="color: #003d38; font-weight: 300;">Description</span></button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link bg-transparent" id="additional-info-tab" data-bs-toggle="tab" data-bs-target="#additional-info" type="button" role="tab" aria-controls="additional-info" aria-selected="false"><span class=" fs-4" style="color: #003d38; font-weight: 600;">Additional Information</span></button>
+                            <button class="nav-link2 bg-transparent" id="additional-info-tab" data-bs-toggle="tab" data-bs-target="#additional-info" type="button" role="tab" aria-controls="additional-info" aria-selected="false"><span class=" fs-4" style="color: #003d38; font-weight: 300;">Additional Information</span></button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link bg-transparent" id="Description-info-tab" data-bs-toggle="tab" data-bs-target="#Description" type="button" role="tab" aria-controls="additional-info" aria-selected="false"><span class=" fs-4" style="color: #003d38!important; font-weight: 600;">How to Order </span> </button>
+                            <button class="nav-link2 bg-transparent" id="Description-info-tab" data-bs-toggle="tab" data-bs-target="#Description" type="button" role="tab" aria-controls="additional-info" aria-selected="false"><span class=" fs-4" style="color: #003d38!important; font-weight: 300;">How to Order </span> </button>
                         </li>
                     </ul>
                     
@@ -522,16 +539,16 @@
         </div>
     </div>
     <!-- End Tab Navigation -->
-
+   
      <!-- Related product section -->
-    <div class="container-fluid px-5 pb-5">
-      <div class="product-header">
+    <div class="container-fluid ">
+      <div class="product-header pt-2">
           <!-- Background text -->
           <!-- <h1 class="background-heading">BonneBelle</h1> -->
           
           <!-- Main content -->
           <!-- <p class="sub-heading"><span style="color: #003d39;">Our Store</span></p> -->
-          <h1 class="main-heading  big-calson-pro" style="color: #003d39;">Related Products</h1>
+          <h1 class="main-heading  big-calson-pro p-0" style="color: #003d39;">Related Products</h1>
           <div class="decorative-line"></div>
       </div>
 
