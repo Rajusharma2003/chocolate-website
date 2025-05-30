@@ -203,6 +203,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 100%;
 }
 
+/* This is for big screen */
 .carousel-item {
     height: 100vh;
     background-size: cover;
@@ -233,6 +234,8 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 2;
         bottom: 1%;
     }
+    
+
 }
 
 .carousel-caption h5 {
@@ -295,14 +298,36 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 @media (max-width: 768px) {
     .carousel-caption h5 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .carousel-caption p {
         font-size: 1rem;
     }
+
+    
 }
 
+/* This is for banner mobile responsive  */
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease, transform 2.0s ease;
+    transform: scale(1.1);
+}
+
+.carousel {
+    height: 60vh;
+} 
+    
+}
 
   /* Carousel Styles */
         /* .carousel {
@@ -390,7 +415,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         .text-content p {
         font-size: 15px;
         line-height: 1.6;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
         max-width: 87%;
         }
 
@@ -681,7 +706,6 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         position: relative;
         padding: 80px 0 40px;
         text-align: center;
-        margin-bottom: 50px;
     }
     
     .background-heading {
@@ -1419,7 +1443,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
     .faq.active {
-        background-color: #fff;
+        background-color: #003d38;
         box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
     }
     
@@ -1445,11 +1469,13 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     .faq-title {
         margin: 0 2px 0 0;
         font-size: 1.2rem;
+        color: #a5915e;
     }
     
     .faq-text {
         display: none;
         margin: 30px 0 0;
+        color: #f2ecd5;
     }
     
     .faq.active .faq-text {
